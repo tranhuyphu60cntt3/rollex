@@ -35,7 +35,7 @@
             <a class="gach p-3" href="#">
               <i class=" fa fa-search" aria-hidden="true"></i>
             </a>
-            <a class="gach p-3" href="">
+            <a type="button" class="gach border-0 p-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <i class=" fa fa-user" aria-hidden="true"></i>
             </a>
             <a class="p-3 d-flex" href="">
@@ -45,10 +45,49 @@
                 <div class="o"></div>
               </div>
             </a>
+            <!-- Button trigger modal -->
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      </div>
+                      <div class="mb-3">
+                        <input type="email" class="w form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                      </div>
+                      <div class="mb-3">
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                      <div class="mb-3 form-check d-flex">
+                        <button type="button" class="btn btn-primary pe-3">Save changes</button>
+                        <div class="ps-5 pt-2">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                      </div>
+                      <p>Quên mật khẩu?</p>
+                    </form>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <nav id="nav" class="navbar navbar-expand-lg navbar-light">
+      <nav id="nav" class="menu navbar navbar-expand-lg navbar-light">
         <div class="container flex-row-reverse flex-sm-row-reverse">
           <div class="d-md-none navbar-brand">
             <a class="p-3 d-flex" href="#">
@@ -120,7 +159,7 @@
       </nav>
     </header>
 
-    <div class="d-flex justify-content-between container py-3">
+    <div class="d-lg-flex d-inline justify-content-between container py-3">
       <div class="flex-grow medium-text-center">
         <div class="">
           <nav class="woocommerce-breadcrumb breadcrumbs">
@@ -131,7 +170,7 @@
         </div>
       </div>
       <div class="medium-text-center d-flex">
-        <div class="d-inline">
+        <div class="d-none d-lg-block ">
           Hiển thị một kết quả duy nhất
         </div>
         <form class="px-2" method="get">
@@ -151,7 +190,182 @@
     </div>
 
     <div class="row container-fluid">
-      <div class="col-md-3">
+      <nav class="col-md-3 d-md-none  nav-hot navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">LỌC</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <aside class="widget nav-link active">
+                  <span
+                    class="widget-title shop-sidebar">Danh mục sản phẩm</span>
+                  <div class="is-divider small"></div>
+                  <ul class="product-categories ul border">
+                    <li class="p-1 border-bottom cat-item cat-item-37"><a
+                        href="./hot.html">Casio</a>
+                    </li>
+                    <li class="p-1 border-bottom cat-item cat-item-36"><a
+                        href="./hot.html">Citizen</a>
+                    </li>
+                    <li class="p-1 border-bottom cat-item cat-item-28"><a
+                        href="./hot.html">Đồng hồ cặp đôi</a></li>
+                    <li class="p-1 border-bottom cat-item cat-item-32"><a
+                        href="./hot.html">Đồng hồ nam</a></li>
+                    <li class="p-1 border-bottom cat-item cat-item-29"><a
+                        href="./hot.html">Đồng hồ nữ</a></li>
+                    <li class="p-1 border-bottom cat-item cat-item-35"><a
+                        href="./hot.html">ROLEX</a>
+                    </li>
+                    <li class="p-1 border-bottom cat-item cat-item-30"><a
+                        href="./hot.html">Sale</a>
+                    </li>
+                    <li class="p-1 cat-item cat-item-31 current-cat active">
+                      <a href="./hot.html">
+                        <b>Sản phẩm Hot</b>
+                      </a>
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+              <li class="nav-item ">
+                <aside 
+                class="widget woocommerce widget_price_filter">
+                <div class="w-90 ">
+                  <div class="d-block">
+                    <label for="customRange2" class="form-label">Lọc theo giá</label>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <input type="range" class="form-range" min="0" max="5" id="customRange2">
+                  </div>
+                </div>
+                
+                <div class="is-divider small"></div>
+                <form method="get"
+                  action="http://mauweb.monamedia.net/rolex/danh-muc/san-pham-hot/">
+                  <div class="price_slider_wrapper">
+                    <div
+                      class="price_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                      style="">
+                      <div class="ui-slider-range ui-widget-header ui-corner-all"
+                        style="left: 0%; width: 100%;"></div><span
+                        class="ui-slider-handle ui-state-default ui-corner-all"
+                        tabindex="0" style="left: 0%;"></span><span
+                        class="ui-slider-handle ui-state-default ui-corner-all"
+                        tabindex="0" style="left: 100%;"></span>
+                    </div>
+                    <div class="price_slider_amount">
+                      <input type="text" id="min_price" name="min_price"
+                        value="819000" data-min="819000" placeholder="Giá thấp nhất"
+                        style="display: none;">
+                      <input type="text" id="max_price" name="max_price"
+                        value="739370000" data-max="739370000"
+                        placeholder="Giá cao nhất" style="display: none;">
+                      <button type="submit" class="button">Lọc</button>
+                      <div class="price_label" style="">
+                        Giá <span class="from">819,000&nbsp;₫</span> — <span
+                          class="to">739,370,000&nbsp;₫</span>
+                      </div>
+    
+                      <div class="clear"></div>
+                    </div>
+                  </div>
+                </form>
+              </aside>
+              </li>
+              <li class="nav-item d-lg-block">
+                <aside id="woocommerce_products-3"
+            class="widget woocommerce widget_products"><span
+              class="widget-title shop-sidebar">Quan tâm</span>
+            <div class="is-divider "></div>
+            <ul class="product_list_widget ul border">
+              <li>
+                <a class="d-flex" href="#">
+                  <div class="flex-1">
+                    <img width="80" height="80"
+                    src="http://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/product-11_large-100x100.jpg"
+                    class="" alt=""> 
+                  </div>
+                  <div class="flex-2">
+                    <span class="product-title">BULOVA CORPORATION
+                      AUTOMATIC MEN'S WATCH 49MM</span>
+                  </div>                  
+                </a>
+                <del><span>15,400,000 ₫</span></del>
+                <ins><span>14,000,000 ₫</span></ins>
+              </li>
+              <li>
+                <a class="d-flex" href="#">
+                  <div class="flex-1">
+                    <img width="80" height="80"
+                    src="http://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/product-11_large-100x100.jpg"
+                    class="" alt=""> 
+                  </div>
+                  <div class="flex-2">
+                    <span class="product-title">BULOVA CORPORATION
+                      AUTOMATIC MEN'S WATCH 49MM</span>
+                  </div>                  
+                </a>
+                <del><span>15,400,000 ₫</span></del>
+                <ins><span>14,000,000 ₫</span></ins>
+              </li>
+              <li>
+                <a class="d-flex" href="#">
+                  <div class="flex-1">
+                    <img width="80" height="80"
+                    src="http://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/product-23_large-100x100.jpg"
+                    class="" alt=""> 
+                  </div>
+                  <div class="flex-2">
+                    <span class="product-title">MICHAEL KORS BRECKEN
+                      CHRONOGRAPH WATCH 44MM</span>
+                  </div>                  
+                </a>
+                <del><span>7,470,000 ₫</span></del>
+                <ins><span>6,470,000 ₫</span></ins>
+              </li>
+              <li>
+                <a class="d-flex" href="#">
+                  <div class="flex-1">
+                    <img width="80" height="80"
+                    src="http://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/15-100x100.jpg"
+                    class="" alt=""> 
+                  </div>
+                  <div class="flex-2">
+                    <span class="product-title">BULOVA CORPORATION
+                      AUTOMATIC MEN'S WATCH 49MM</span>
+                  </div>                  
+                </a>
+                <del><span>15,400,000 ₫</span></del>
+                <ins><span>14,000,000 ₫</span></ins>
+              </li>
+              <li>
+                <a class="d-flex" href="#">
+                  <div class="flex-1">
+                    <img width="80" height="80"
+                    src="http://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/product6_20a32b81-5765-41f0-96da-606bb1ce5ed8_large-100x100.jpg"
+                    class="" alt=""> 
+                  </div>
+                  <div class="flex-2">
+                    <span class="product-title">BULOVA CORPORATION
+                      AUTOMATIC MEN'S WATCH 49MM</span>
+                  </div>                  
+                </a>
+                <del><span>15,400,000 ₫</span></del>
+                <ins><span>14,000,000 ₫</span></ins>
+              </li>
+
+            </ul>
+          </aside>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="col-md-3 d-md-block d-none">
         <div class="sidebar-inner col-inner">
           <aside class="widget ">
             <span
@@ -184,8 +398,19 @@
             </ul>
           </aside>
           <aside 
-            class="widget woocommerce widget_price_filter"><span
-              class="widget-title shop-sidebar">Lọc theo giá</span>
+            class="widget woocommerce widget_price_filter">
+
+            <div class="w-90 ">
+              <div class="d-block">
+                <label for="customRange2" class="form-label">Lọc theo giá</label>
+              </div>
+              <div class="d-flex justify-content-end">
+                <input type="range" class="form-range" min="0" max="5" id="customRange2">
+              </div>
+            </div>
+            
+            
+            <!-- <span class="widget-title shop-sidebar">Lọc theo giá</span> -->
             <div class="is-divider small"></div>
             <form method="get"
               action="http://mauweb.monamedia.net/rolex/danh-muc/san-pham-hot/">
@@ -303,77 +528,76 @@
           </aside>
         </div>
       </div>
-
-      <div class="col-md-9 p-5">
+      <div class="col-md-9 col-12 p-lg-5">
         <div class="row">
-          <div class="col-md-4 p-5">
+          <div class="col-md-4 col-6 p-lg-5 p-3">
             <div class="product-item">
               <div class="text-center d-flex justify-content-center">
-                <img style="width: 200px;height: 200px;" src="./images/products/clock1.jpg" alt="">
+                <img style="width: 80%; max-height: 200px;" src="./images/products/clock1.jpg" alt="">
               </div>
               <div class="text-center">
-                <h5>VERSACE VANITAS ROSE GOLD WATCH 40MM</h5>
+                <p>VERSACE VANITAS ROSE GOLD WATCH 40MM</p>
                 <p>38,100,000 ₫</p>
               </div>
             </div>
   
           </div>
-          <div class="col-md-4 p-5">
+          <div class="col-md-4 col-6 p-lg-5 p-3">
             <div class="product-item">
               <div class="text-center d-flex justify-content-center">
-                <img style="width: 200px;height: 200px;" src="./images/products/clock2.jpg" alt="">
+                <img style="width: 80%;max-height: 200px;" src="./images/products/clock2.jpg" alt="">
               </div>
               <div class="text-center">
-                <h5>VERSACE VANITAS ROSE GOLD WATCH 40MM</h5>
+                <p>VERSACE VANITAS ROSE GOLD WATCH 40MM</p>
                 <p>38,100,000 ₫</p>
               </div>
             </div>
   
           </div>
-          <div class="col-md-4 p-5">
+          <div class="col-md-4 col-6 p-lg-5 p-3">
             <div class="product-item">
               <div class="text-center d-flex justify-content-center">
-                <img style="width: 200px;height: 200px;" src="./images/products/clock3.jpg" alt="">
+                <img style="width: 80%;max-height: 200px;" src="./images/products/clock3.jpg" alt="">
               </div>
               <div class="text-center">
-                <h5>VERSACE VANITAS ROSE GOLD WATCH 40MM</h5>
+                <p>VERSACE VANITAS ROSE GOLD WATCH 40MM</p>
                 <p><p class="text-decoration-line-through d-inline">24,000,000 ₫ </p>20,000,000₫</p>
               </div>
             </div>
   
           </div>
           
-          <div class="col-md-4 p-5">
+          <div class="col-md-4 col-6 p-lg-5 p-3">
             <div class="product-item">
               <div class="text-center d-flex justify-content-center">
-                <img style="width: 200px;height: 200px;" src="./images/products/clock4.jpg" alt="">
+                <img style="width: 80%;max-height: 200px;" src="./images/products/clock4.jpg" alt="">
               </div>
               <div class="text-center">
-                <h5>VERSACE VANITAS ROSE GOLD WATCH 40MM</h5>
+                <p>VERSACE VANITAS ROSE GOLD WATCH 40MM</p>
                 <p>38,100,000 ₫</p>
               </div>
             </div>
   
           </div>
-          <div class="col-md-4 p-5">
+          <div class="col-md-4 col-6 p-lg-5 p-3">
             <div class="product-item">
               <div class="text-center d-flex justify-content-center">
-                <img style="width: 200px;height: 200px;" src="./images/products/clock5.jpg" alt="">
+                <img style="width: 80%;max-height: 200px;" src="./images/products/clock5.jpg" alt="">
               </div>
               <div class="text-center">
-                <h5>VERSACE VANITAS ROSE GOLD WATCH 40MM</h5>
+                <p>VERSACE VANITAS ROSE GOLD WATCH 40MM</p>
                 <p>38,100,000 ₫</p>
               </div>
             </div>
   
           </div>
-          <div class="col-md-4 p-5">
+          <div class="col-md-4 col-6 p-lg-5 p-3">
             <div class="product-item">
               <div class="text-center d-flex justify-content-center">
-                <img style="width: 200px;height: 200px;" src="./images/products/clock6.jpg" alt="">
+                <img style="width: 80%;max-height: 200px;" src="./images/products/clock6.jpg" alt="">
               </div>
               <div class="text-center">
-                <h5>VERSACE VANITAS ROSE GOLD WATCH 40MM</h5>
+                <p>VERSACE VANITAS ROSE GOLD WATCH 40MM</p>
                 <p><p class="text-decoration-line-through d-inline">24,000,000 ₫ </p>20,000,000₫</p>
               </div>
             </div>
@@ -383,6 +607,12 @@
         </div>
       </div>
     </div>
+    <a href="#" class="messenger">
+      <img data-remodal-target="fb-messenger" src="./images/fb-messenger.png">
+    </a>
+    
+    <a class="back-to-top button" href="#header"><i
+        class="fa fa-angle-up"></i></a>
     <footer class="bg-f ">
       <div class="container-fluid">
         <div class="row p-70">
@@ -561,12 +791,13 @@
     </a>
   </div>
 
-  <script src="/js/main.js"></script>
-  <script src="/js/util.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/util.js"></script>
 
   <script src="./slick/slick.min.js"></script>
   <script src="./slick/slick.js"></script>
 
+  <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
   <script>
     $('.single-item').slick();
     $('.filtering3').slick({
@@ -596,7 +827,7 @@
         gotop.removeClass("active");
       }
     });
-    var menutop = $(".navbar");
+    var menutop = $(".navbar.menu");
     $(window).on("scroll", () => {
       if (($(this).scrollTop() >= 100) && (window.screen.width > 768)) {
         menutop.addClass("top animate__animated animate__animated animate__slow animate__bounceInDown");
@@ -606,13 +837,7 @@
     });
     
   </script>
-  <script src="./js/main.js"></script>
-  <script src="./js/util.js"></script>
-
-  <script src="./slick/slick.min.js"></script>
-  <script src="./slick/slick.js"></script>
-
-  <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  
 </body>
 
 </html>

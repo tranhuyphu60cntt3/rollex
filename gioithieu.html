@@ -35,7 +35,7 @@
             <a class="gach p-3" href="#">
               <i class=" fa fa-search" aria-hidden="true"></i>
             </a>
-            <a class="gach p-3" href="">
+            <a type="button" class="gach border-0 p-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <i class=" fa fa-user" aria-hidden="true"></i>
             </a>
             <a class="p-3 d-flex" href="">
@@ -45,10 +45,49 @@
                 <div class="o"></div>
               </div>
             </a>
+            <!-- Button trigger modal -->
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      </div>
+                      <div class="mb-3">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                      </div>
+                      <div class="mb-3">
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                      <div class="mb-3 form-check d-flex">
+                        <button type="button" class="btn btn-primary pe-3">Save changes</button>
+                        <div class="ps-5 pt-2">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                      </div>
+                      <p>Quên mật khẩu?</p>
+                    </form>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <nav id="nav" class="navbar navbar-expand-lg navbar-light">
+      <nav id="nav" class="menu navbar navbar-expand-lg navbar-light">
         <div class="container flex-row-reverse flex-sm-row-reverse">
           <div class="d-md-none navbar-brand">
             <a class="p-3 d-flex" href="#">
@@ -556,6 +595,13 @@
         </div>
       </div>
     </section>
+
+    <a href="#" class="messenger">
+      <img data-remodal-target="fb-messenger" src="./images/fb-messenger.png">
+    </a>
+    
+    <a class="back-to-top button" href="#header"><i
+        class="fa fa-angle-up"></i></a>
     <footer class="bg-f row">
       <div class="container-fluid">
         <div class="row p-70">
@@ -732,6 +778,23 @@
       </a>
     </footer>
   </div>
+  <a class="call text-decoration-none " href="tel:+0963349613">
+    <div class="position-relative">
+      <div class="box-call animate__animated animate__infinite animate__zoomIn">
+      </div>
+      <div class="in-call">
+        <i class="animate__animated animate__infinite animate__tada fa fa-phone-square" style="font-size:30px" aria-hidden="true"></i>
+  
+      </div>
+    </div>
+  </a>
+  <script src="./js/main.js"></script>
+  <script src="./js/util.js"></script>
+
+  <script src="./slick/slick.min.js"></script>
+  <script src="./slick/slick.js"></script>
+
+  <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
   <script>
     $('.single-item').slick();
     $('.filtering3').slick({
@@ -761,7 +824,7 @@
         gotop.removeClass("active");
       }
     });
-    var menutop = $(".navbar");
+    var menutop = $(".navbar.menu");
     $(window).on("scroll", () => {
       if (($(this).scrollTop() >= 100) && (window.screen.width > 768)) {
         menutop.addClass("top animate__animated animate__animated animate__slow animate__bounceInDown");
@@ -771,13 +834,7 @@
     });
     
   </script>
-  <script src="./js/main.js"></script>
-  <script src="./js/util.js"></script>
-
-  <script src="./slick/slick.min.js"></script>
-  <script src="./slick/slick.js"></script>
-
-  <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  
 </body>
 
 </html>

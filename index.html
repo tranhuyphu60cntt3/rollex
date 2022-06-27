@@ -14,7 +14,7 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-  
+   
   <script src="./jquery/jquery-3.6.0.min.js"></script>
   <script src="./jquery/jquery-migrate-3.3.2.min.js"></script>
 
@@ -35,7 +35,7 @@
             <a class="gach p-3" href="#">
               <i class=" fa fa-search" aria-hidden="true"></i>
             </a>
-            <a class="gach p-3" href="">
+            <a type="button" class="gach border-0 p-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <i class=" fa fa-user" aria-hidden="true"></i>
             </a>
             <a class="p-3 d-flex" href="">
@@ -45,10 +45,49 @@
                 <div class="o"></div>
               </div>
             </a>
+            <!-- Button trigger modal -->
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      </div>
+                      <div class="mb-3">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                      </div>
+                      <div class="mb-3">
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                      <div class="mb-3 form-check d-flex">
+                        <button type="button" class="btn btn-primary pe-3">Save changes</button>
+                        <div class="ps-5 pt-2">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                      </div>
+                      <p>Quên mật khẩu?</p>
+                    </form>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <nav id="nav" class="navbar navbar-expand-lg navbar-light">
+      <nav id="nav" class="menu navbar navbar-expand-lg navbar-light">
         <div class="container flex-row-reverse flex-sm-row-reverse">
           <div class="d-md-none navbar-brand">
             <a class="p-3 d-flex" href="#">
@@ -530,8 +569,6 @@
           </div>
         </div>
       </div>
-
-
     </section>
     <section class="bg-fill">
       <div class="container">
@@ -701,8 +738,8 @@
       <div class="container-fluid ">
         <div class="row p-70">
           <div class="col-md-3 col-12">
-            <img src="images/hoabinh/anhbandoi.jpg"
-              style="width: 220px;height: 137px;" alt="">
+            <img src="./images/footer/logo-f.png"
+              style="width: 220px;height: 137px;" alt="logo-f">
           </div>
           <div class="col-md-3 col-12">
             <div class="d-flex">
@@ -828,7 +865,7 @@
 
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-12">
             <h3 class="text-light">FOLLOW US</h3>
             <div class="text-f">
               <p>Follow để không bỏ lỡ bất kì ưu đãi nào từ chúng tôi</p>
@@ -852,7 +889,7 @@
               <p>Đăng ký để nhận được được thông tin mới nhất từ chúng tôi.</p>
             </div>
             <input class="p-2" type="email" placeholder="Email..." size="40">
-            <i class="fas fa-paper-plane"></i>
+            <i class="fa fa-paper-plane"></i>
           </div>
         </div>
       </div>
@@ -884,10 +921,6 @@
   <script src="./slick/slick.js"></script>
 
   <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
-    crossorigin="anonymous">
-  </script> -->
 
   <script>
     $('.single-item').slick();
@@ -918,7 +951,7 @@
         gotop.removeClass("active");
       }
     });
-    var menutop = $(".navbar");
+    var menutop = $(".navbar.menu");
     $(window).on("scroll", () => {
       if (($(this).scrollTop() >= 100) && (window.screen.width > 768)) {
         menutop.addClass("top animate__animated animate__animated animate__slow animate__bounceInDown");

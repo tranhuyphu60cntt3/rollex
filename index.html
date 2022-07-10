@@ -32,23 +32,49 @@
               alt="logo-header">
           </div>
           <div class="nav d-flex ">
-            <a class="gach p-3" href="#">
+            <a class="gach px-4 py-3" href="#">
               <i class=" fa fa-search" aria-hidden="true"></i>
             </a>
-            <a type="button" class="gach border-0 p-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <a class="gach px-4 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <i class=" fa fa-user" aria-hidden="true"></i>
             </a>
-            <a class="p-3 d-flex" href="">
-              <p>0 đ</p>
+            <a id="cart" class="px-4 py-3 d-flex" 
+            href="./cart.html"
+            data-bs-toggle="" data-bs-target="">
+              <p class="gia">14,619,000  đ</p>
               <div class="cart">
                 <p>0</p>
                 <div class="o"></div>
+                <div class="cart-header_gio text-center">
+                  <div class="p-3 d-flex justify-content-center">
+                    <table class="table-cart">
+                      <tr>
+                        <td colspan="3">
+                          <p style="color: #cbba9c;">Tổng phụ: <b style="color: #000;">14,619,000 ₫</b></p> 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">
+                          <a href="./cart.html" class="update text-light text-center d-block p-2">
+                            XEM GIỎ HÀNG
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">
+                          <a href="./thanhtoan.html" class="thanhtoan text-center text-light d-block p-2">
+                            THANH TOÁN
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
               </div>
             </a>
-            <!-- Button trigger modal -->
 
-
-            <!-- Modal -->
+             
+            <!-- Modal login -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -90,12 +116,13 @@
       <nav id="nav" class="menu navbar navbar-expand-lg navbar-light">
         <div class="container flex-row-reverse flex-sm-row-reverse">
           <div class="d-md-none navbar-brand">
-            <a class="p-3 d-flex" href="#">
-              <div class="cart">
+            <a class="p-3 d-flex" href="cart.html">
+              <div class="cart cart-header">
                 <p>+</p>
                 <div class="o"></div>
               </div>
             </a>
+            
           </div>
           <div class="d-md-none navbar-brand">
             <a class="" href="#">
@@ -115,23 +142,23 @@
                 <button class="btn btn-outline-success" type="submit">Search</button>
               </form>
               <p></p>
-              <li class="nav-item py-2 px-3 d-block">
-                <a class="nav-link active" aria-current="page" href="./index.html">TRANG CHỦ</a>
+              <li class="nav-item py-3 px-4 d-block">
+                <a class="" aria-current="page" href="./index.html">TRANG CHỦ</a>
               </li>
-              <li class="nav-item t py-2 px-3 d-block">
-                <a class="nav-link active" href="hot.html">SẢN PHẨM HOT</a>
+              <li class="nav-item t py-3 px-4 d-block">
+                <a class="" href="hot.html">SẢN PHẨM HOT</a>
               </li>
-              <li class="nav-item t py-2 px-3 d-block">
-                <a class="nav-link active" href="hot.html">SALE</a>
+              <li class="nav-item t py-3 px-4 d-block">
+                <a class="" href="hot.html">SALE</a>
               </li>
-              <li class="nav-item t py-2 px-3 d-block">
-                <a class="nav-link active" href="hot.html">ĐỒNG HỒ NAM</a>
+              <li class="nav-item t py-3 px-4 d-block">
+                <a class="" href="hot.html">ĐỒNG HỒ NAM</a>
               </li>
-              <li class="nav-item t py-2 px-3 d-block">
-                <a class="nav-link active" href="hot.html">ĐỒNG HỒ NỮ</a>
+              <li class="nav-item t py-3 px-4 d-block">
+                <a class="" href="hot.html">ĐỒNG HỒ NỮ</a>
               </li>
-              <li class="nav-item t py-2 px-3 d-block dropdown">
-                <a class="nav-link active dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="nav-item t py-3 px-4 d-block dropdown">
+                <a class=" dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   BRANDS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
@@ -140,17 +167,17 @@
                   <li><a class="dropdown-item" href="#">CASIO</a></li>
                 </ul>
               </li>
-              <li class="nav-item t py-2 px-3 d-block">
-                <a class="nav-link active" href="lienhe.html">LIÊN HỆ</a>
+              <li class="nav-item t py-3 px-4 d-block">
+                <a class="" href="lienhe.html">LIÊN HỆ</a>
               </li>
-              <li class="nav-item t py-2 px-3 d-block">
-                <a class="nav-link active" href="gioithieu.html">GIỚI THIỆU</a>
+              <li class="nav-item t py-3 px-4 d-block">
+                <a class="" href="gioithieu.html">GIỚI THIỆU</a>
               </li>
-              <li class="d-flex nav-item t py-2 px-3 d-block d-sm-block d-md-none">
-                <a class="nav-link active" href="gioithieu.html">ĐĂNG NHẬP</a>
+              <li class="d-flex nav-item t py-3 px-4 d-block d-sm-block d-md-none">
+                <a class="" href="gioithieu.html">ĐĂNG NHẬP</a>
               </li>
-              <li class="d-flex nav-item t py-2 px-3 d-block d-sm-block d-md-none">
-                <a class="nav-link active" href="gioithieu.html">HOT LINE 098 087 866</a>
+              <li class="d-flex nav-item t py-3 px-4 d-block d-sm-block d-md-none">
+                <a class="" href="gioithieu.html">HOT LINE 098 087 866</a>
               </li>
             </ul>
             
@@ -162,8 +189,8 @@
     <section class="slider ">
       <div class="single-item row ">
         <div class="slider1">
-          <img src="./images/sliders/slider1.jpg" alt="">
-          <div class="slider1-text text-inner text-left">
+          <img class="" src="./images/sliders/slider1.jpg" alt="">
+          <div class="animate__animated animate__bounce  animate__fadeInRight animate__delay-2s slider1-text text-inner text-left">
             <blockquote class="px-4">
               <h6 class="uppercase">
                 <span style="color: #cbba9c;">BỘ SƯU TẬP ĐỒNG HỒ</span>
@@ -177,7 +204,7 @@
                   tiêu chuẩn chính xác nhất.</span></p>
             </blockquote>
           </div>
-          <div class="slider1-btn">
+          <div class="slider1-btn animate__animated animate__bounce  animate__fadeInRight animate__delay-2s">
             <a href="http://mauweb.monamedia.net/rolex/cua-hang/" target="_self"
               class="button  mua-ngay p-3">
               <span>MUA NGAY</span>
@@ -186,7 +213,7 @@
         </div>
         <div class="slider2">
           <img src="./images/sliders/slider2.jpg" alt="">
-          <div class="slider2-text text-inner text-left">
+          <div class="slider2-text text-inner text-left animate__animated animate__bounce  animate__fadeInUp animate__delay-2s">
             <blockquote class="px-4">
               <h6 class="uppercase">
                 <span style="color: #cbba9c;">Dành riêng cho doanh nhân</span>
@@ -274,15 +301,15 @@
           <div class="col-md-4 col-12 p-5">
             <div class="product-item">
               <div class="text-center d-flex justify-content-center">
-                <img style="width: 375px;height: 375px;"
+                <img class="img-prd" style="width: 90%;max-height: 375px;"
                   src="./images/products/clock1.jpg" alt="">
               </div>
               <div class="text-center">
-                <h3>VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
-                <p>38,100,000 ₫</p>
+                <h3 class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
+                <div class="price">38,100,000 ₫</div>
               </div>
 
-              <div class="cart">
+              <div class="cart btn-cart">
                 <p>+</p>
                 <div class="o"></div>
               </div>
@@ -295,16 +322,16 @@
                 <p>90%</p>
               </div>
               <div class="text-center d-flex justify-content-center">
-                <img style="width: 375px;height: 375px;"
+                <img class="img-prd" style="width: 90%;max-height: 375px;"
                   src="./images/products/clock2.jpg" alt="">
               </div>
               <div class="text-center">
-                <h3>VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
+                <h3 class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
                   <p class="text-decoration-line-through d-inline">76,000,000 ₫
-                  </p>1,000,000 ₫</p>
+                  </p class="price">1,000,000 ₫</p>
                 </p>
               </div>
-              <div class="cart">
+              <div class="cart btn-cart">
                 <p>+</p>
                 <div class="o"></div>
               </div>
@@ -317,15 +344,15 @@
                 <p>90%</p>
               </div>
               <div class="text-center d-flex justify-content-center">
-                <img style="width: 375px;height: 375px;"
+                <img class="img-prd" style="width: 90%;max-height: 375px;"
                   src="./images/products/clock3.jpg" alt="">
               </div>
               <div class="text-center">
-                <h3>VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
+                <h3 class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
                 <p class="text-decoration-line-through d-inline">76,000,000 ₫
-                </p>29,000,000₫</p>
+                </p class="price">29,000,000₫</p>
               </div>
-              <div class="cart">
+              <div class="cart btn-cart">
                 <p>+</p>
                 <div class="o"></div>
               </div>
@@ -336,14 +363,14 @@
           <div class="col-md-4 col-12 p-5">
             <div class="product-item">
               <div class="text-center d-flex justify-content-center">
-                <img style="width: 375px;height: 375px;"
+                <img class="img-prd" style="width: 90%;max-height: 375px;"
                   src="./images/products/clock4.jpg" alt="">
               </div>
               <div class="text-center">
-                <h3>VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
-                <p>38,100,000 ₫</p>
+                <h3 class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
+                <p class="price">38,100,000 ₫</p>
               </div>
-              <div class="cart">
+              <div class="cart btn-cart">
                 <p>+</p>
                 <div class="o"></div>
               </div>
@@ -353,14 +380,14 @@
           <div class="col-md-4 col-12 p-5">
             <div class="product-item">
               <div class="text-center d-flex justify-content-center ">
-                <img style="width: 375px;height: 375px;"
+                <img class="img-prd" style="width: 90%;max-height: 375px;"
                   src="./images/products/clock5.jpg" alt="">
               </div>
               <div class="text-center">
-                <h3>VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
-                <p>100,100,000 ₫</p>
+                <h3 class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
+                <p class="price">100,100,000 ₫</p>
               </div>
-              <div class="cart">
+              <div class="cart btn-cart">
                 <p>+</p>
                 <div class="o"></div>
               </div>
@@ -373,16 +400,16 @@
                 <p>90%</p>
               </div>
               <div class="text-center d-flex justify-content-center">
-                <img style="width: 375px;height: 375px;"
+                <img class="img-prd" style="width: 90%;max-height: 375px;"
                   src="./images/products/clock6.jpg" alt="">
               </div>
               <div class="text-center">
-                <h3>VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
+                <h3 class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
                 <p>
                 <p class="text-decoration-line-through d-inline">24,000,000 ₫
                 </p>20,000,000₫</p>
               </div>
-              <div class="cart">
+              <div class="cart btn-cart">
                 <p>+</p>
                 <div class="o"></div>
               </div>
@@ -908,7 +935,6 @@
       </div>
       <div class="in-call">
         <i class="animate__animated animate__infinite animate__tada fa fa-phone-square" style="font-size:30px" aria-hidden="true"></i>
-  
       </div>
     </div>
   </a>
@@ -921,6 +947,8 @@
   <script src="./slick/slick.js"></script>
 
   <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- <script src="./script.js"></script> -->
 
   <script>
     $('.single-item').slick();
@@ -951,6 +979,14 @@
         gotop.removeClass("active");
       }
     });
+    var menutop = $(".haeder");
+    $(window).on("scroll", () => {
+      if (($(this).scrollTop() >= 100) && (window.screen.width > 768)) {
+        menutop.addClass("top");
+      } else {
+        menutop.removeClass("top");
+      }
+    });
     var menutop = $(".navbar.menu");
     $(window).on("scroll", () => {
       if (($(this).scrollTop() >= 100) && (window.screen.width > 768)) {
@@ -959,7 +995,6 @@
         menutop.removeClass("top animate__animated animate__animated animate__slow animate__bounceInDown");
       }
     });
-    
   </script>
 </body>
 

@@ -9,11 +9,62 @@
 }
 a{
   text-decoration: none;
-  color: #a4a4a4;
+  color: #fff;
+}
+.pb-41{
+  padding-bottom: 41px !important;
+}
+a.a-cart{
+  text-decoration: none;
+  color: #334862;
+}
+a.a-cart:hover{
+  text-decoration: none;
+  color: #000;
+}
+.thanhtoan{
+  background-color: #d26e4b;
+}
+.thanhtoan:hover{
+  background-color: #a8583c;
+}
+.apdung{
+  background-color: #f9f9f9;
+  color: #666;
+  border: 1px solid #666;
+}
+.apdung:hover{
+  background-color: #c7c7c7;
+}
+.update{
+  background-color:  #c5c2bb;
+  color: #fff;
+}
+.update:hover{
+  background-color: #cbba9c;
+}
+.sp{
+  background-color: #fff;
+  color: #c7bfb1;
+  border: 1px solid #c7bfb1;
+}
+.sp:hover{
+  background-color: #c7bfb1 !important;
+  color:#fff;
+}
+.home:hover{
+  color: #111 !important;
 }
 a:hover{
   color: #7ca740;
 }
+.hv000:hover{
+ color: #000 !important;
+}
+li a{
+  font-weight: 500;
+}
+
 .zoom {
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
@@ -61,9 +112,84 @@ a:hover{
   background-color: #cbba9c ;
   color: #fff;
 }
+.cart::after{
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: 70px;
+  content: "Giỏ hàng";
+  color: #fff;
+  background-color: #000;
+  display: none;
+}
+.cart:hover::after{
+ display: block;
+}
+.cart{
+  position: relative;
+}
+.cart-header_gio{
+  position: absolute;
+  top:40px;
+  right: 0px;
+  width: 250px;
+  min-height: 250px;
+  z-index: 10;
+  border: 1px solid #cbba9c;
+  background-color: white;
+  padding-right: 30px;
+  display: none;
+}
+#cart:hover .cart-header_gio{
+  display: block;
+}
+.btn-cart{
+  font-weight: 400;
+}
+.table-cart th{
+  padding: 8px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+.table-cart td{
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+a.remove, a.icon-remove {
+  display: block;
+  width: 24px;
+  height: 24px;
+  font-size: 15px !important;
+  line-height: 19px !important;
+  border-radius: 100%;
+  color: #ccc;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid currentColor;
+}
+a.remove:hover{
+  color: #000;
+}
 .row{
   margin: 0 !important;
   --bs-gutter-x: 0;
+}
+/* thanh toan */
+.dashed {
+  border-style: dashed;
+  border-color: #d26e4b;
+}
+.solid {
+  border-style: solid;
+  border-color: #d26e4b;
+}
+.bor_1{
+  border-bottom: 1px solid #c2b5b0;
+}
+.bor_2{
+  border-bottom: 2px solid #c2b5b0;
 }
 /* header */
 .form-control {
@@ -85,7 +211,10 @@ a:hover{
   flex-grow: 1;
   align-items: center;
 }
-
+/* a.nav-link{
+  font-weight: bolder;
+  color: #fff;
+} */
 /* messenger */
 .messenger{ 
   position: fixed;
@@ -130,7 +259,7 @@ a:hover{
     width: 80px;
     height: 80px;
     z-index: 3;
-    display: flex;
+    display: flex;  
     justify-content: center;
     align-items: center;
   }
@@ -457,13 +586,17 @@ nav i{
     width: 2px;
     height: 20px;
     background-color: #856a6a;
-    z-index: 2;
+    z-index: 1;
   }
   li.t::before:first-child{
     display: none;
  }
+  .gia{
+    color: rgb(102 102 102 / 85%) ;
+  }
   .gach{
     position: relative;
+    color: rgb(102 102 102 / 85%);
   }
   .gach::after{
     position: absolute;
@@ -474,7 +607,6 @@ nav i{
     height: 20px;
     background-color: #856a6a;
     z-index: 2;
-
   }
 }
 @media (max-width:800px) {
@@ -482,6 +614,27 @@ nav i{
     width: 80%;
   }
 }
+@media (min-width: 576px){
+
+  .modal-dialog {
+      max-width: 800px;
+  }
+}
 .w-90{
   width: 90%;
+}
+.modal-body {
+  padding: 1rem;
+}
+.cart-quantity-input {
+  height: 40px;
+  width: 50px;
+  border-radius: 5px;
+  border: 1px solid #56CCF2;
+  background-color: #eee;
+  color: #333;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 25px;
 }

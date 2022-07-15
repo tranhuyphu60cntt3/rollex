@@ -31,24 +31,61 @@
             <img src="./images/header/logo.png" style="height: 70px;"
               alt="logo-header">
           </div>
+          <!-- tìm kiếm -->
           <div class="nav d-flex ">
-            <a class="gach p-3" href="#">
+            <a class="gach search px-4 py-3" href="#">
               <i class=" fa fa-search" aria-hidden="true"></i>
-            </a>
-            <a type="button" class="gach border-0 p-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <i class=" fa fa-user" aria-hidden="true"></i>
-            </a>
-            <a class="p-3 d-flex" href="">
-              <p>0 đ</p>
-              <div class="cart">
-                <p>0</p>
-                <div class="o"></div>
+              <div class="s">
+                <div class="p-2">
+                  <form class="d-flex p-3 w-90">
+                    <input class="form-control " type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                    <button style="background-color: #cbba9c;" class="btn btn-outline-success" type="submit">
+                      <i  class="fa fa-search search" aria-hidden="true"></i>
+                    </button>
+                  </form>
+                </div>
               </div>
             </a>
-            <!-- Button trigger modal -->
+            <a class="gach px-4 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class=" fa fa-user" aria-hidden="true"></i>
+            </a>
+            <a id="cart" class="px-4 py-3 d-flex" 
+            href="./cart.html"
+            data-bs-toggle="" data-bs-target="">
+              <p class="gia">14,619,000  đ</p>
+              <div class="cart gio">
+                <p>0</p>
+                <div class="o"></div>
+                <div class="cart-header_gio text-center">
+                  <div class="p-3 d-flex justify-content-center">
+                    <table class="table-cart">
+                      <tr>
+                        <td colspan="3">
+                          <p style="color: #cbba9c;">Tổng phụ: <b style="color: #000;">14,619,000 ₫</b></p> 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">
+                          <a href="./cart.html" class="update text-light text-center d-block p-2">
+                            XEM GIỎ HÀNG
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">
+                          <a href="./thanhtoan.html" class="thanhtoan text-center text-light d-block p-2">
+                            THANH TOÁN
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </a>
 
-
-            <!-- Modal -->
+             
+            <!-- Modal login -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -90,12 +127,13 @@
       <nav id="nav" class="menu navbar navbar-expand-lg navbar-light">
         <div class="container flex-row-reverse flex-sm-row-reverse">
           <div class="d-md-none navbar-brand">
-            <a class="p-3 d-flex" href="#">
-              <div class="cart">
+            <a class="p-3 d-flex" href="cart.html">
+              <div class="cart cart-header">
                 <p>+</p>
                 <div class="o"></div>
               </div>
             </a>
+            
           </div>
           <div class="d-md-none navbar-brand">
             <a class="" href="#">
@@ -111,27 +149,29 @@
           <div class="collapse navbar-collapse " id="navbarScroll">
             <ul class="d-flex flex-lg-grow-0  navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
               <form class="d-flex nav-item p-2 d-sm-block d-md-none w-90">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control " type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                <button style="background-color: #cbba9c;" class="btn btn-outline-success" type="submit">
+                  <i  class="fa fa-search search" aria-hidden="true"></i>
+                </button>
               </form>
               <p></p>
               <li class="nav-item py-3 px-4 d-block">
-                <a class="" aria-current="page" href="./index.html">TRANG CHỦ</a>
+                <a class="a-nav" aria-current="page" href="./index.html">TRANG CHỦ</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">SẢN PHẨM HOT</a>
+                <a class="a-nav" href="hot.html">SẢN PHẨM HOT</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">SALE</a>
+                <a class="a-nav" href="hot.html">SALE</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">ĐỒNG HỒ NAM</a>
+                <a class="a-nav" href="hot.html">ĐỒNG HỒ NAM</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">ĐỒNG HỒ NỮ</a>
+                <a class="a-nav" href="hot.html">ĐỒNG HỒ NỮ</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block dropdown">
-                <a class=" dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="a-nav dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   BRANDS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
@@ -141,16 +181,20 @@
                 </ul>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="lienhe.html">LIÊN HỆ</a>
+                <a class="a-nav" href="lienhe.html">LIÊN HỆ</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="gioithieu.html">GIỚI THIỆU</a>
+                <a class="a-nav" href="gioithieu.html">GIỚI THIỆU</a>
               </li>
               <li class="d-flex nav-item t py-3 px-4 d-block d-sm-block d-md-none">
-                <a class="" href="gioithieu.html">ĐĂNG NHẬP</a>
+                <a class="a-nav" href="gioithieu.html">ĐĂNG NHẬP</a>
               </li>
               <li class="d-flex nav-item t py-3 px-4 d-block d-sm-block d-md-none">
-                <a class="" href="gioithieu.html">HOT LINE 098 087 866</a>
+                <div class="phone animate__animated animate__delay-3s animate__infinite animate__tada "></div>
+                <div class="fw-bolder">
+                  <p>&nbsp; HOT LINE &nbsp;<a class="sdt" href="tel:+076 922 0162"> 098 087 866</a></p>
+                </div>
+                
               </li>
             </ul>
             

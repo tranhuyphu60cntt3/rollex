@@ -31,9 +31,20 @@
             <img src="./images/header/logo.png" style="height: 70px;"
               alt="logo-header">
           </div>
+          <!-- tìm kiếm -->
           <div class="nav d-flex ">
-            <a class="gach px-4 py-3" href="#">
+            <a class="gach search px-4 py-3" href="#">
               <i class=" fa fa-search" aria-hidden="true"></i>
+              <div class="s">
+                <div class="p-2">
+                  <form class="d-flex p-3 w-90">
+                    <input class="form-control " type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                    <button style="background-color: #cbba9c;" class="btn btn-outline-success" type="submit">
+                      <i  class="fa fa-search search" aria-hidden="true"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
             </a>
             <a class="gach px-4 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <i class=" fa fa-user" aria-hidden="true"></i>
@@ -42,7 +53,7 @@
             href="./cart.html"
             data-bs-toggle="" data-bs-target="">
               <p class="gia">14,619,000  đ</p>
-              <div class="cart">
+              <div class="cart gio">
                 <p>0</p>
                 <div class="o"></div>
                 <div class="cart-header_gio text-center">
@@ -138,27 +149,29 @@
           <div class="collapse navbar-collapse " id="navbarScroll">
             <ul class="d-flex flex-lg-grow-0  navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
               <form class="d-flex nav-item p-2 d-sm-block d-md-none w-90">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control " type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                <button style="background-color: #cbba9c;" class="btn btn-outline-success" type="submit">
+                  <i  class="fa fa-search search" aria-hidden="true"></i>
+                </button>
               </form>
               <p></p>
               <li class="nav-item py-3 px-4 d-block">
-                <a class="" aria-current="page" href="./index.html">TRANG CHỦ</a>
+                <a class="a-nav" aria-current="page" href="./index.html">TRANG CHỦ</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">SẢN PHẨM HOT</a>
+                <a class="a-nav" href="hot.html">SẢN PHẨM HOT</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">SALE</a>
+                <a class="a-nav" href="hot.html">SALE</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">ĐỒNG HỒ NAM</a>
+                <a class="a-nav" href="hot.html">ĐỒNG HỒ NAM</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">ĐỒNG HỒ NỮ</a>
+                <a class="a-nav" href="hot.html">ĐỒNG HỒ NỮ</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block dropdown">
-                <a class=" dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="a-nav dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   BRANDS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
@@ -168,16 +181,20 @@
                 </ul>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="lienhe.html">LIÊN HỆ</a>
+                <a class="a-nav" href="lienhe.html">LIÊN HỆ</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="gioithieu.html">GIỚI THIỆU</a>
+                <a class="a-nav" href="gioithieu.html">GIỚI THIỆU</a>
               </li>
               <li class="d-flex nav-item t py-3 px-4 d-block d-sm-block d-md-none">
-                <a class="" href="gioithieu.html">ĐĂNG NHẬP</a>
+                <a class="a-nav" href="gioithieu.html">ĐĂNG NHẬP</a>
               </li>
               <li class="d-flex nav-item t py-3 px-4 d-block d-sm-block d-md-none">
-                <a class="" href="gioithieu.html">HOT LINE 098 087 866</a>
+                <div class="phone animate__animated animate__delay-3s animate__infinite animate__tada "></div>
+                <div class="fw-bolder">
+                  <p>&nbsp; HOT LINE &nbsp;<a class="sdt" href="tel:+076 922 0162"> 098 087 866</a></p>
+                </div>
+                
               </li>
             </ul>
             
@@ -298,36 +315,15 @@
 
       <div class="p-5">
         <div class="row">
-          <div class="col-md-4 col-12 p-5">
+          <div class="col-md-4 col-6 p-md-4">
             <div class="product-item">
               <div class="text-center d-flex justify-content-center">
                 <img class="img-prd" style="width: 90%;max-height: 375px;"
                   src="./images/products/clock1.jpg" alt="">
               </div>
-              <div class="text-center">
-                <h3 class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
-                <div class="price">38,100,000 ₫</div>
-              </div>
-
-              <div class="cart btn-cart">
-                <p>+</p>
-                <div class="o"></div>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-md-4 col-12 p-5">
-            <div class="product-item">
-              <div class="sale-off d-flex justify-content-center text-light">
-                <p>90%</p>
-              </div>
-              <div class="text-center d-flex justify-content-center">
-                <img class="img-prd" style="width: 90%;max-height: 375px;"
-                  src="./images/products/clock2.jpg" alt="">
-              </div>
-              <div class="text-center">
-                <h3 class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
-                  <p class="text-decoration-line-through d-inline">76,000,000 ₫
+              <div class="text-center" style="font-weight: 500;">
+                <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                <p class="text-decoration-line-through d-inline">76,000,000 ₫
                   </p class="price">1,000,000 ₫</p>
                 </p>
               </div>
@@ -338,19 +334,42 @@
             </div>
 
           </div>
-          <div class="col-md-4 col-12 p-5">
+          <div class="col-md-4 col-6 p-md-4">
             <div class="product-item">
               <div class="sale-off d-flex justify-content-center text-light">
-                <p>90%</p>
+                <p>-90%</p>
+              </div>
+              <div class="text-center d-flex justify-content-center">
+                <img class="img-prd" style="width: 90%;max-height: 375px;"
+                  src="./images/products/clock2.jpg" alt="">
+              </div>
+              <div class="text-center" style="font-weight: 500;">
+                <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                <p class="text-decoration-line-through d-inline">76,000,000 ₫
+                  </p class="price">1,000,000 ₫</p>
+                </p>
+              </div>
+              <div class="cart btn-cart">
+                <p>+</p>
+                <div class="o"></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 col-6 p-md-4">
+            <div class="product-item">
+              <div class="sale-off d-flex justify-content-center text-light">
+                <p>-90%</p>
               </div>
               <div class="text-center d-flex justify-content-center">
                 <img class="img-prd" style="width: 90%;max-height: 375px;"
                   src="./images/products/clock3.jpg" alt="">
               </div>
-              <div class="text-center">
-                <h3 class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
+              <div class="text-center" style="font-weight: 500;">
+                <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
                 <p class="text-decoration-line-through d-inline">76,000,000 ₫
-                </p class="price">29,000,000₫</p>
+                  </p class="price">1,000,000 ₫</p>
+                </p>
               </div>
               <div class="cart btn-cart">
                 <p>+</p>
@@ -360,15 +379,17 @@
 
           </div>
 
-          <div class="col-md-4 col-12 p-5">
+          <div class="col-md-4 col-6 p-md-4">
             <div class="product-item">
               <div class="text-center d-flex justify-content-center">
                 <img class="img-prd" style="width: 90%;max-height: 375px;"
                   src="./images/products/clock4.jpg" alt="">
               </div>
-              <div class="text-center">
-                <h3 class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
-                <p class="price">38,100,000 ₫</p>
+              <div class="text-center" style="font-weight: 500;">
+                <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                <p class="text-decoration-line-through d-inline">76,000,000 ₫
+                  </p class="price">1,000,000 ₫</p>
+                </p>
               </div>
               <div class="cart btn-cart">
                 <p>+</p>
@@ -377,15 +398,17 @@
             </div>
 
           </div>
-          <div class="col-md-4 col-12 p-5">
+          <div class="col-md-4 col-6 p-md-4">
             <div class="product-item">
               <div class="text-center d-flex justify-content-center ">
                 <img class="img-prd" style="width: 90%;max-height: 375px;"
                   src="./images/products/clock5.jpg" alt="">
               </div>
-              <div class="text-center">
-                <h3 class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
-                <p class="price">100,100,000 ₫</p>
+              <div class="text-center" style="font-weight: 500;">
+                <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                <p class="text-decoration-line-through d-inline">76,000,000 ₫
+                  </p class="price">1,000,000 ₫</p>
+                </p>
               </div>
               <div class="cart btn-cart">
                 <p>+</p>
@@ -394,20 +417,20 @@
             </div>
 
           </div>
-          <div class="col-md-4 col-12 p-5">
+          <div class="col-md-4 col-6 p-md-4">
             <div class="product-item">
               <div class="sale-off d-flex justify-content-center text-light">
-                <p>90%</p>
+                <p>-90%</p>
               </div>
               <div class="text-center d-flex justify-content-center">
                 <img class="img-prd" style="width: 90%;max-height: 375px;"
                   src="./images/products/clock6.jpg" alt="">
               </div>
-              <div class="text-center">
-                <h3 class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</h3>
-                <p>
-                <p class="text-decoration-line-through d-inline">24,000,000 ₫
-                </p>20,000,000₫</p>
+              <div class="text-center" style="font-weight: 500;">
+                <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                <p class="text-decoration-line-through d-inline">76,000,000 ₫
+                  </p class="price">1,000,000 ₫</p>
+                </p>
               </div>
               <div class="cart btn-cart">
                 <p>+</p>
@@ -600,22 +623,28 @@
     <section class="bg-fill">
       <div class="container">
         <div class="row overflow-hidden">
-          <div class="col-md-4 text-center overflow-hidden">
-            <img class="zoom" src="./images/img1.jpg" alt="">
+          <div class="col-md-4 text-center ">
+            <div class="overflow-hidden">
+              <img class="zoom" src="./images/img1.jpg" alt="">
+            </div>
             <div class="p-2">
               <h4>Chronograph 100M</h4>
               <p>Timers Villa</p>
             </div>
           </div>
-          <div class="col-md-4 text-center overflow-hidden">
-            <img class="zoom" src="./images/img2.jpg" alt="">
+          <div class="col-md-4 text-center ">
+            <div class="overflow-hidden">
+              <img class="zoom" src="./images/img2.jpg" alt="">
+            </div>
             <div class="p-2">
               <h4>Men’s Maiden</h4>
               <p>A Friend of a Man</p>
             </div>
           </div>
-          <div class="col-md-4 text-center overflow-hidden">
-            <img class="zoom" src="./images/img3.jpg" alt="">
+          <div class="col-md-4 text-center ">
+            <div class="overflow-hidden">
+              <img class="zoom" src="./images/img3.jpg" alt="">
+            </div>
             <div class="p-2">
               <h4>Thin Dial</h4>
               <p>Complete Mechanical</p>
@@ -648,11 +677,10 @@
               <p class="from_the_blog_excerpt ">Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut ... </p>
-              <button
-                href="http://mauweb.monamedia.net/rolex/aerolithe-performance-titanium-watch/"
-                class="mua-ngay button py-2 px-3">
+              <a class="blog-doctiep "
+                href="#">
                 ĐỌC THÊM
-              </button>
+              </a>
             </div>
           </div>
           <div class="item-blog ">
@@ -667,11 +695,10 @@
               <p class="from_the_blog_excerpt ">Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut ... </p>
-              <button
-                href="http://mauweb.monamedia.net/rolex/aerolithe-performance-titanium-watch/"
-                class="mua-ngay button py-2 px-3">
+                <a class="blog-doctiep "
+                href="#">
                 ĐỌC THÊM
-              </button>
+              </a>
             </div>
           </div>
           <div class="item-blog ">
@@ -686,11 +713,10 @@
               <p class="from_the_blog_excerpt ">Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut ... </p>
-              <button
-                href="http://mauweb.monamedia.net/rolex/aerolithe-performance-titanium-watch/"
-                class="mua-ngay button py-2 px-3">
+                <a class="blog-doctiep "
+                href="#">
                 ĐỌC THÊM
-              </button>
+              </a>
             </div>
           </div>
           <div class="item-blog ">
@@ -705,11 +731,10 @@
               <p class="from_the_blog_excerpt ">Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut ... </p>
-              <button
-                href="http://mauweb.monamedia.net/rolex/aerolithe-performance-titanium-watch/"
-                class="mua-ngay button py-2 px-3">
+                <a class="blog-doctiep "
+                href="#">
                 ĐỌC THÊM
-              </button>
+              </a>
             </div>
           </div>
           <div class="item-blog ">
@@ -724,11 +749,10 @@
               <p class="from_the_blog_excerpt ">Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut ... </p>
-              <button
-                href="http://mauweb.monamedia.net/rolex/aerolithe-performance-titanium-watch/"
-                class="mua-ngay button py-2 px-3">
+                <a class="blog-doctiep "
+                href="#">
                 ĐỌC THÊM
-              </button>
+              </a>
             </div>
           </div>
           <div class="item-blog ">
@@ -743,11 +767,10 @@
               <p class="from_the_blog_excerpt ">Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut ... </p>
-              <button
-                href="http://mauweb.monamedia.net/rolex/aerolithe-performance-titanium-watch/"
-                class="mua-ngay button py-2 px-3">
+                <a class="blog-doctiep "
+                href="#">
                 ĐỌC THÊM
-              </button>
+              </a>
             </div>
           </div>
         </div>

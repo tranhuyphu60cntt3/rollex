@@ -9,6 +9,7 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./rangeslider.css">
   <link rel="stylesheet" href="./style.css">
   <link
   rel="stylesheet"
@@ -20,7 +21,7 @@
 
   <link rel="stylesheet" href="./slick/slick.css">
   <link rel="stylesheet" href="./slick/slick-theme.css">
-</head>
+
 
 <body>
   <div class="hot">
@@ -31,24 +32,61 @@
             <img src="./images/header/logo.png" style="height: 70px;"
               alt="logo-header">
           </div>
+          <!-- tìm kiếm -->
           <div class="nav d-flex ">
-            <a class="gach p-3" href="#">
+            <a class="gach search px-4 py-3" href="#">
               <i class=" fa fa-search" aria-hidden="true"></i>
-            </a>
-            <a type="button" class="gach border-0 p-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <i class=" fa fa-user" aria-hidden="true"></i>
-            </a>
-            <a class="p-3 d-flex" href="">
-              <p>0 đ</p>
-              <div class="cart">
-                <p>0</p>
-                <div class="o"></div>
+              <div class="s">
+                <div class="p-2">
+                  <form class="d-flex p-3 w-90">
+                    <input class="form-control " type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                    <button style="background-color: #cbba9c;" class="btn btn-outline-success" type="submit">
+                      <i  class="fa fa-search search" aria-hidden="true"></i>
+                    </button>
+                  </form>
+                </div>
               </div>
             </a>
-            <!-- Button trigger modal -->
+            <a class="gach px-4 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class=" fa fa-user" aria-hidden="true"></i>
+            </a>
+            <a id="cart" class="px-4 py-3 d-flex" 
+            href="./cart.html"
+            data-bs-toggle="" data-bs-target="">
+              <p class="gia">14,619,000  đ</p>
+              <div class="cart gio">
+                <p>0</p>
+                <div class="o"></div>
+                <div class="cart-header_gio text-center">
+                  <div class="p-3 d-flex justify-content-center">
+                    <table class="table-cart">
+                      <tr>
+                        <td colspan="3">
+                          <p style="color: #cbba9c;">Tổng phụ: <b style="color: #000;">14,619,000 ₫</b></p> 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">
+                          <a href="./cart.html" class="update text-light text-center d-block p-2">
+                            XEM GIỎ HÀNG
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">
+                          <a href="./thanhtoan.html" class="thanhtoan text-center text-light d-block p-2">
+                            THANH TOÁN
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </a>
 
-
-            <!-- Modal -->
+             
+            <!-- Modal login -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -62,7 +100,7 @@
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
                       </div>
                       <div class="mb-3">
-                        <input type="email" class="w form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                       </div>
                       <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
@@ -90,12 +128,13 @@
       <nav id="nav" class="menu navbar navbar-expand-lg navbar-light">
         <div class="container flex-row-reverse flex-sm-row-reverse">
           <div class="d-md-none navbar-brand">
-            <a class="p-3 d-flex" href="#">
-              <div class="cart">
+            <a class="p-3 d-flex" href="cart.html">
+              <div class="cart cart-header">
                 <p>+</p>
                 <div class="o"></div>
               </div>
             </a>
+            
           </div>
           <div class="d-md-none navbar-brand">
             <a class="" href="#">
@@ -111,27 +150,29 @@
           <div class="collapse navbar-collapse " id="navbarScroll">
             <ul class="d-flex flex-lg-grow-0  navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
               <form class="d-flex nav-item p-2 d-sm-block d-md-none w-90">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control " type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                <button style="background-color: #cbba9c;" class="btn btn-outline-success" type="submit">
+                  <i  class="fa fa-search search" aria-hidden="true"></i>
+                </button>
               </form>
               <p></p>
               <li class="nav-item py-3 px-4 d-block">
-                <a class="" aria-current="page" href="./index.html">TRANG CHỦ</a>
+                <a class="a-nav" aria-current="page" href="./index.html">TRANG CHỦ</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">SẢN PHẨM HOT</a>
+                <a class="a-nav" href="hot.html">SẢN PHẨM HOT</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">SALE</a>
+                <a class="a-nav" href="hot.html">SALE</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">ĐỒNG HỒ NAM</a>
+                <a class="a-nav" href="hot.html">ĐỒNG HỒ NAM</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">ĐỒNG HỒ NỮ</a>
+                <a class="a-nav" href="hot.html">ĐỒNG HỒ NỮ</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block dropdown">
-                <a class=" dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="a-nav dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   BRANDS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
@@ -141,16 +182,20 @@
                 </ul>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="lienhe.html">LIÊN HỆ</a>
+                <a class="a-nav" href="lienhe.html">LIÊN HỆ</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="gioithieu.html">GIỚI THIỆU</a>
+                <a class="a-nav" href="gioithieu.html">GIỚI THIỆU</a>
               </li>
               <li class="d-flex nav-item t py-3 px-4 d-block d-sm-block d-md-none">
-                <a class="" href="gioithieu.html">ĐĂNG NHẬP</a>
+                <a class="a-nav" href="gioithieu.html">ĐĂNG NHẬP</a>
               </li>
               <li class="d-flex nav-item t py-3 px-4 d-block d-sm-block d-md-none">
-                <a class="" href="gioithieu.html">HOT LINE 098 087 866</a>
+                <div class="phone animate__animated animate__delay-3s animate__infinite animate__tada "></div>
+                <div class="fw-bolder">
+                  <p>&nbsp; HOT LINE &nbsp;<a class="sdt" href="tel:+076 922 0162"> 098 087 866</a></p>
+                </div>
+                
               </li>
             </ul>
             
@@ -158,7 +203,7 @@
         </div>
       </nav>
     </header>
-
+   
     <div class="d-lg-flex d-inline justify-content-between container py-3">
       <div class="flex-grow medium-text-center">
         <div class="">
@@ -236,44 +281,36 @@
                   class="widget woocommerce widget_price_filter">
                   <div class="w-90 ">
                     <div class="d-block">
-                      <label for="customRange2" class="form-label">Lọc theo giá</label>
+                      <label for="customRange2" class="form-label">LỌC THEO GIÁ</label>
                     </div>
-                    <div class="d-flex justify-content-end">
-                      <input type="range" class="form-range" min="0" max="5" id="customRange2">
-                    </div>
+                    
                   </div>
-                  
-                  <div class="is-divider small"></div>
-                  <form method="get"
-                    action="http://mauweb.monamedia.net/rolex/danh-muc/san-pham-hot/">
-                    <div class="price_slider_wrapper">
-                      <div
-                        class="price_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
-                        style="">
-                        <div class="ui-slider-range ui-widget-header ui-corner-all"
-                          style="left: 0%; width: 100%;"></div><span
-                          class="ui-slider-handle ui-state-default ui-corner-all"
-                          tabindex="0" style="left: 0%;"></span><span
-                          class="ui-slider-handle ui-state-default ui-corner-all"
-                          tabindex="0" style="left: 100%;"></span>
-                      </div>
-                      <div class="price_slider_amount">
-                        <input type="text" id="min_price" name="min_price"
-                          value="819000" data-min="819000" placeholder="Giá thấp nhất"
-                          style="display: none;">
-                        <input type="text" id="max_price" name="max_price"
-                          value="739370000" data-max="739370000"
-                          placeholder="Giá cao nhất" style="display: none;">
-                        <button type="submit" class="button">Lọc</button>
-                        <div class="price_label" style="">
-                          Giá <span class="from">819,000&nbsp;₫</span> — <span
-                            class="to">739,370,000&nbsp;₫</span>
-                        </div>
-      
-                        <div class="clear"></div>
+                  <!-- LOC -->
+                  <!-- <div class="">
+                    <div class="row">
+                      <div class="col-12">
+                        <div id="slider-range"></div>
                       </div>
                     </div>
-                  </form>
+                    <div class="d-flex slider-labels">
+                      <div class="caption pe-2">
+                        <div class="loc px-3 py-1">LỌC</div>
+                      </div>
+                      <div class="caption">
+                        <strong>Giá:</strong> <span id="slider-range-value1"></span>
+                        <strong>-</strong> <span id="slider-range-value2"></span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <form>
+                          <input type="hidden" name="min-value" value="">
+                          <input type="hidden" name="max-value" value="">
+                        </form>
+                      </div>
+                    </div>
+                  </div> -->
+                 
                 </aside>
                 </li>
                 <li class="nav-item d-lg-block">
@@ -282,36 +319,7 @@
                 class="widget-title shop-sidebar">Quan tâm</span>
               <div class="is-divider "></div>
               <ul class="product_list_widget ul border">
-                <li>
-                  <a class="d-flex" href="#">
-                    <div class="flex-1">
-                      <img width="80" height="80"
-                      src="http://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/product-11_large-100x100.jpg"
-                      class="" alt=""> 
-                    </div>
-                    <div class="flex-2">
-                      <span style="color: #334862;font-size: 14px; font-weight: 450;" class="product-title hv000">BULOVA CORPORATION
-                        AUTOMATIC MEN'S WATCH 49MM</span>
-                    </div>                  
-                  </a>
-                  <del><span>15,400,000 ₫</span></del>
-                  <ins><b>14,000,000 ₫</b></ins>
-                </li>
-                <li>
-                  <a class="d-flex" href="#">
-                    <div class="flex-1">
-                      <img width="80" height="80"
-                      src="http://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/product-11_large-100x100.jpg"
-                      class="" alt=""> 
-                    </div>
-                    <div class="flex-2">
-                      <span style="color: #334862;font-size: 14px; font-weight: 450;" class="product-title">BULOVA CORPORATION
-                        AUTOMATIC MEN'S WATCH 69MM</span>
-                    </div>                  
-                  </a>
-                  <del><span>15,400,000 ₫</span></del>
-                  <ins><b>14,000,000 ₫</b></ins>
-                </li>
+              
                 <li>
                   <a class="d-flex" href="#">
                     <div class="flex-1">
@@ -409,67 +417,41 @@
   
               <div class="w-90 ">
                 <div class="d-block">
-                  <label for="customRange2" class="form-label">Lọc theo giá</label>
+                  <label for="customRange2" class="form-label">LỌC THEO GIÁ</label>
                 </div>
-                <div class="d-flex justify-content-end">
-                  <input type="range" class="form-range" min="0" max="5" id="customRange2">
+                <!-- LOC -->
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12">
+                      <div  id="slider-range"></div>
+                    </div>
+                  </div>
+                  <div class="d-flex slider-labels">
+                    <div class="caption pe-2">
+                      <div class="loc px-3 py-1">LỌC</div>
+                    </div>
+                    <div class="caption">
+                      <strong>Giá:</strong> <span id="slider-range-value1"></span>
+                      <strong>-</strong> <span id="slider-range-value2"></span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <form>
+                        <input type="hidden" name="min-value" value="">
+                        <input type="hidden" name="max-value" value="">
+                      </form>
+                    </div>
+                  </div>
                 </div>
               </div>
               
-              
-              <!-- <span class="widget-title shop-sidebar">Lọc theo giá</span> -->
-              <div class="is-divider small"></div>
-              <form method="get"
-                action="http://mauweb.monamedia.net/rolex/danh-muc/san-pham-hot/">
-                <div class="price_slider_wrapper">
-                  <div
-                    class="price_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
-                    style="">
-                    <div class="ui-slider-range ui-widget-header ui-corner-all"
-                      style="left: 0%; width: 100%;"></div><span
-                      class="ui-slider-handle ui-state-default ui-corner-all"
-                      tabindex="0" style="left: 0%;"></span><span
-                      class="ui-slider-handle ui-state-default ui-corner-all"
-                      tabindex="0" style="left: 100%;"></span>
-                  </div>
-                  <div class="price_slider_amount">
-                    <input type="text" id="min_price" name="min_price"
-                      value="819000" data-min="819000" placeholder="Giá thấp nhất"
-                      style="display: none;">
-                    <input type="text" id="max_price" name="max_price"
-                      value="739370000" data-max="739370000"
-                      placeholder="Giá cao nhất" style="display: none;">
-                    <button type="submit" class="button">Lọc</button>
-                    <div class="price_label" style="">
-                      Giá <span class="from">819,000&nbsp;₫</span> — <span
-                        class="to">739,370,000&nbsp;₫</span>
-                    </div>
-  
-                    <div class="clear"></div>
-                  </div>
-                </div>
-              </form>
             </aside>
             <aside id="woocommerce_products-3"
               class="widget woocommerce widget_products"><span
                 class="widget-title shop-sidebar">Quan tâm</span>
               <div class="is-divider "></div>
               <ul class="product_list_widget ul border">
-                <li>
-                  <a class="d-flex" href="#">
-                    <div class="flex-1">
-                      <img width="80" height="80"
-                      src="http://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/product-11_large-100x100.jpg"
-                      class="" alt=""> 
-                    </div>
-                    <div class="flex-2">
-                      <span CORPORATION class="product-title hv000">BULOVA CORPORATION
-                        AUTOMATIC MEN'S WATCH 49MM</span>
-                    </div>                  
-                  </a>
-                  <del><span>15,400,000 ₫</span></del>
-                  <ins><b>14,000,000 ₫</b></ins>
-                </li>
                 <li>
                   <a class="d-flex" href="#">
                     <div class="flex-1">
@@ -536,80 +518,132 @@
           </div>
         </div>
         <div class="col-md-9 col-12 p-lg-5">
-          <div class="row ">
-            <div class="col-md-4 col-6 p-lg-2 p-2">
+          <div class="row">
+            <div class="col-md-4 col-12 p-md-4">
               <div class="product-item">
                 <div class="text-center d-flex justify-content-center">
-                  <img style="width: 90%; max-height: 200px;" src="./images/products/clock1.jpg" alt="">
+                  <img class="img-prd" style="width: 90%;max-height: 375px;"
+                    src="./images/products/clock1.jpg" alt="">
                 </div>
-                <div class="text-center">
-                  <p>VERSACE VANITAS ROSE GOLD WATCH 40MM</p>
-                  <p>38,100,000 ₫</p>
+                <div class="text-center" style="font-weight: 500;">
+                  <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                  <p class="text-decoration-line-through d-inline">76,000,000 ₫
+                    </p class="price">1,000,000 ₫</p>
+                  </p>
+                </div>
+                <div class="cart btn-cart">
+                  <p>+</p>
+                  <div class="o"></div>
                 </div>
               </div>
-    
+  
             </div>
-            <div class="col-md-4 col-6 p-lg-2 p-2">
+            <div class="col-md-4 col-12 p-md-4">
+              <div class="product-item">
+                <div class="sale-off d-flex justify-content-center text-light">
+                  <p>-90%</p>
+                </div>
+                <div class="text-center d-flex justify-content-center">
+                  <img class="img-prd" style="width: 90%;max-height: 375px;"
+                    src="./images/products/clock2.jpg" alt="">
+                </div>
+                <div class="text-center" style="font-weight: 500;">
+                  <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                  <p class="text-decoration-line-through d-inline">76,000,000 ₫
+                    </p class="price">1,000,000 ₫</p>
+                  </p>
+                </div>
+                <div class="cart btn-cart">
+                  <p>+</p>
+                  <div class="o"></div>
+                </div>
+              </div>
+  
+            </div>
+            <div class="col-md-4 col-12 p-md-4">
+              <div class="product-item">
+                <div class="sale-off d-flex justify-content-center text-light">
+                  <p>-90%</p>
+                </div>
+                <div class="text-center d-flex justify-content-center">
+                  <img class="img-prd" style="width: 90%;max-height: 375px;"
+                    src="./images/products/clock3.jpg" alt="">
+                </div>
+                <div class="text-center" style="font-weight: 500;">
+                  <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                  <p class="text-decoration-line-through d-inline">76,000,000 ₫
+                    </p class="price">1,000,000 ₫</p>
+                  </p>
+                </div>
+                <div class="cart btn-cart">
+                  <p>+</p>
+                  <div class="o"></div>
+                </div>
+              </div>
+  
+            </div>
+  
+            <div class="col-md-4 col-12 p-md-4">
               <div class="product-item">
                 <div class="text-center d-flex justify-content-center">
-                  <img style="width: 90%;max-height: 200px;" src="./images/products/clock2.jpg" alt="">
+                  <img class="img-prd" style="width: 90%;max-height: 375px;"
+                    src="./images/products/clock4.jpg" alt="">
                 </div>
-                <div class="text-center">
-                  <p>VERSACE VANITAS ROSE GOLD WATCH 40MM</p>
-                  <p>38,100,000 ₫</p>
+                <div class="text-center" style="font-weight: 500;">
+                  <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                  <p class="text-decoration-line-through d-inline">76,000,000 ₫
+                    </p class="price">1,000,000 ₫</p>
+                  </p>
+                </div>
+                <div class="cart btn-cart">
+                  <p>+</p>
+                  <div class="o"></div>
                 </div>
               </div>
+  
             </div>
-            <div class="col-md-4 col-6 p-lg-2 p-2">
+            <div class="col-md-4 col-12 p-md-4">
               <div class="product-item">
-                <div class="text-center d-flex justify-content-center">
-                  <img style="width: 90%;max-height: 200px;" src="./images/products/clock3.jpg" alt="">
+                <div class="text-center d-flex justify-content-center ">
+                  <img class="img-prd" style="width: 90%;max-height: 375px;"
+                    src="./images/products/clock5.jpg" alt="">
                 </div>
-                <div class="text-center">
-                  <p>VERSACE VANITAS ROSE GOLD WATCH 40MM</p>
-                  <p><p class="text-decoration-line-through d-inline">24,000,000 ₫ </p><b>20,000,000₫</b></p>
+                <div class="text-center" style="font-weight: 500;">
+                  <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                  <p class="text-decoration-line-through d-inline">76,000,000 ₫
+                    </p class="price">1,000,000 ₫</p>
+                  </p>
+                </div>
+                <div class="cart btn-cart">
+                  <p>+</p>
+                  <div class="o"></div>
                 </div>
               </div>
-    
+  
             </div>
-            
-            <div class="col-md-4 col-6 p-lg-2 p-2">
+            <div class="col-md-4 col-12 p-md-4">
               <div class="product-item">
-                <div class="text-center d-flex justify-content-center">
-                  <img style="width: 90%;max-height: 200px;" src="./images/products/clock4.jpg" alt="">
+                <div class="sale-off d-flex justify-content-center text-light">
+                  <p>-90%</p>
                 </div>
-                <div class="text-center">
-                  <p>VERSACE VANITAS ROSE GOLD WATCH 40MM</p>
-                  <p>38,100,000 ₫</p>
+                <div class="text-center d-flex justify-content-center">
+                  <img class="img-prd" style="width: 90%;max-height: 375px;"
+                    src="./images/products/clock6.jpg" alt="">
+                </div>
+                <div class="text-center" style="font-weight: 500;">
+                  <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                  <p class="text-decoration-line-through d-inline">76,000,000 ₫
+                    </p class="price">1,000,000 ₫</p>
+                  </p>
+                </div>
+                <div class="cart btn-cart">
+                  <p>+</p>
+                  <div class="o"></div>
                 </div>
               </div>
-    
+  
             </div>
-            <div class="col-md-4 col-6 p-lg-2 p-2">
-              <div class="product-item">
-                <div class="text-center d-flex justify-content-center">
-                  <img style="width: 90%;max-height: 200px;" src="./images/products/clock5.jpg" alt="">
-                </div>
-                <div class="text-center">
-                  <p>VERSACE VANITAS ROSE GOLD WATCH 40MM</p>
-                  <p>38,100,000 ₫</p>
-                </div>
-              </div>
-    
-            </div>
-            <div class="col-md-4 col-6 p-lg-2 p-2">
-              <div class="product-item">
-                <div class="text-center d-flex justify-content-center">
-                  <img style="width: 90%;max-height: 200px;" src="./images/products/clock6.jpg" alt="">
-                </div>
-                <div class="text-center">
-                  <p>VERSACE VANITAS ROSE GOLD WATCH 40MM</p>
-                  <p><p class="text-decoration-line-through d-inline">24,000,000 ₫ </p><b>20,000,000₫</b></p>
-                </div>
-              </div>
-    
-            </div>
-            
+  
           </div>
         </div>
       </div>
@@ -793,11 +827,11 @@
         </div>
         <div class="in-call">
           <i class="animate__animated animate__infinite animate__tada fa fa-phone-square" style="font-size:30px" aria-hidden="true"></i>
-    
         </div>
       </div>
     </a>
   </div>
+  <script src="./script.js"></script>
 
   <script src="./js/main.js"></script>
   <script src="./js/util.js"></script>

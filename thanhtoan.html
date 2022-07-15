@@ -9,6 +9,7 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="./bootstrap-5.2.0-beta1-dist/css/bootstrap-grid.min.css"> -->
   <link rel="stylesheet" href="./style.css">
   <link
   rel="stylesheet"
@@ -32,65 +33,60 @@
             <img src="./images/header/logo.png" style="height: 70px;"
               alt="logo-header">
           </div>
+          <!-- tìm kiếm -->
           <div class="nav d-flex ">
-            <a class="gach p-3" href="#">
+            <a class="gach search px-4 py-3" href="#">
               <i class=" fa fa-search" aria-hidden="true"></i>
-            </a>
-            <a class="gach p-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <i class=" fa fa-user" aria-hidden="true"></i>
-            </a>
-            <a id="cart" class="p-3 d-flex" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-              <p class="gia">0 đ</p>
-              <div class="cart">
-                <p>0</p>
-                <div class="o"></div>
+              <div class="s">
+                <div class="p-2">
+                  <form class="d-flex p-3 w-90">
+                    <input class="form-control " type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                    <button style="background-color: #cbba9c;" class="btn btn-outline-success" type="submit">
+                      <i  class="fa fa-search search" aria-hidden="true"></i>
+                    </button>
+                  </form>
+                </div>
               </div>
             </a>
-
-              <!-- Modal cart -->
-              <div class="modal fade " id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModal2Label">GIỎ HÀNG</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="cart-row d-flex justify-content-around">
-                        <span class="cart-item cart-header cart-column">Sản Phẩm</span>
-                        <span class="cart-price cart-header cart-column">Giá</span>
-                        <span class="cart-quantity cart-header cart-column">Số Lượng</span>
-                      </div>
-                      <div class="cart-items">
-                        <div class="cart-row d-flex justify-content-between align-items-center">
-                          <div class="cart-column">
-                              <img class="cart-item-image" src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/sualai.jpg?v=1573720306000" width="100" height="100">
-                              <span class="cart-item-title">Mũi Hàn </span>
-                          </div>
-                          <span class="cart-price cart-column">25000đ</span>
-                          <div class="cart-quantity cart-column">
-                              <input class="cart-quantity-input" type="number" value="1">
-                              <button class="btn btn-danger" type="button">Xóa</button>
-                          </div>
-
-                        </div>
-                      </div>    
-                    <div class="cart-total">
-                      <strong class="cart-total-title">Tổng Cộng:</strong>
-                      <span class="cart-total-price">0VNĐ</span>
-                  </div>                
-                    </div>  
-                    <div class="modal-footer ">
-                      <button type="button" class="btn btn-secondary close-footer" data-bs-dismiss="modal">Đóng</button>
-                      <button type="button" class="btn btn-primary order">Thanh Toán</button>
-                    </div>
-                    </div>
-                   
+            <a class="gach px-4 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class=" fa fa-user" aria-hidden="true"></i>
+            </a>
+            <a id="cart" class="px-4 py-3 d-flex" 
+            href="./cart.html"
+            data-bs-toggle="" data-bs-target="">
+              <p class="gia">14,619,000  đ</p>
+              <div class="cart gio">
+                <p>0</p>
+                <div class="o"></div>
+                <div class="cart-header_gio text-center">
+                  <div class="p-3 d-flex justify-content-center">
+                    <table class="table-cart">
+                      <tr>
+                        <td colspan="3">
+                          <p style="color: #cbba9c;">Tổng phụ: <b style="color: #000;">14,619,000 ₫</b></p> 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">
+                          <a href="./cart.html" class="update text-light text-center d-block p-2">
+                            XEM GIỎ HÀNG
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">
+                          <a href="./thanhtoan.html" class="thanhtoan text-center text-light d-block p-2">
+                            THANH TOÁN
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
                   </div>
                 </div>
               </div>
+            </a>
 
-
+             
             <!-- Modal login -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -133,12 +129,13 @@
       <nav id="nav" class="menu navbar navbar-expand-lg navbar-light">
         <div class="container flex-row-reverse flex-sm-row-reverse">
           <div class="d-md-none navbar-brand">
-            <a class="p-3 d-flex" href="#">
-              <div class="cart">
+            <a class="p-3 d-flex" href="cart.html">
+              <div class="cart cart-header">
                 <p>+</p>
                 <div class="o"></div>
               </div>
             </a>
+            
           </div>
           <div class="d-md-none navbar-brand">
             <a class="" href="#">
@@ -154,27 +151,29 @@
           <div class="collapse navbar-collapse " id="navbarScroll">
             <ul class="d-flex flex-lg-grow-0  navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
               <form class="d-flex nav-item p-2 d-sm-block d-md-none w-90">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control " type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                <button style="background-color: #cbba9c;" class="btn btn-outline-success" type="submit">
+                  <i  class="fa fa-search search" aria-hidden="true"></i>
+                </button>
               </form>
               <p></p>
               <li class="nav-item py-3 px-4 d-block">
-                <a class="" aria-current="page" href="./index.html">TRANG CHỦ</a>
+                <a class="a-nav" aria-current="page" href="./index.html">TRANG CHỦ</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">SẢN PHẨM HOT</a>
+                <a class="a-nav" href="hot.html">SẢN PHẨM HOT</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">SALE</a>
+                <a class="a-nav" href="hot.html">SALE</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">ĐỒNG HỒ NAM</a>
+                <a class="a-nav" href="hot.html">ĐỒNG HỒ NAM</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="hot.html">ĐỒNG HỒ NỮ</a>
+                <a class="a-nav" href="hot.html">ĐỒNG HỒ NỮ</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block dropdown">
-                <a class=" dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="a-nav dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   BRANDS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
@@ -184,16 +183,20 @@
                 </ul>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="lienhe.html">LIÊN HỆ</a>
+                <a class="a-nav" href="lienhe.html">LIÊN HỆ</a>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
-                <a class="" href="gioithieu.html">GIỚI THIỆU</a>
+                <a class="a-nav" href="gioithieu.html">GIỚI THIỆU</a>
               </li>
               <li class="d-flex nav-item t py-3 px-4 d-block d-sm-block d-md-none">
-                <a class="" href="gioithieu.html">ĐĂNG NHẬP</a>
+                <a class="a-nav" href="gioithieu.html">ĐĂNG NHẬP</a>
               </li>
               <li class="d-flex nav-item t py-3 px-4 d-block d-sm-block d-md-none">
-                <a class="" href="gioithieu.html">HOT LINE 098 087 866</a>
+                <div class="phone animate__animated animate__delay-3s animate__infinite animate__tada "></div>
+                <div class="fw-bolder">
+                  <p>&nbsp; HOT LINE &nbsp;<a class="sdt" href="tel:+076 922 0162"> 098 087 866</a></p>
+                </div>
+                
               </li>
             </ul>
             
@@ -203,42 +206,68 @@
     </header>
 
     <div class="container">
-      <p>Bạn đã có tài khoản? Ấn vào đây để đăng nhập</p>
-      <p>Nếu trước đây bạn đã mua hàng của chúng tôi, vui lòng điền đầy đủ thông tin đăng nhập dưới đây. Nếu bạn là khách hàng mới, vui lòng tiếp tục các bước tiếp theo.</p>
-      <div class="row">
-        <div class="col-md-6 col-12 py-2">
-          <label for="">Tên đăng nhập hoặc email *</label>
-          <input class="w-90" type="text" name="" id="">
-        </div>
-        <div class="col-md-6 col-12 py-2">
-          <label for="">Mật khẩu *</label>
-          <input class="w-90" type="password" name="" id="">
+      <!-- Ấn vào đây để đăng nhập -->
+      <div class="">
+        <p>
+          Bạn đã có tài khoản?
+          <a class="show" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Ấn vào đây để đăng nhập
+          </a>
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <p>Nếu trước đây bạn đã mua hàng của chúng tôi, vui lòng điền đầy đủ thông tin đăng nhập dưới đây. Nếu bạn là khách hàng mới, vui lòng tiếp tục các bước tiếp theo.</p>
+                <div class="row">
+                  <div class="col-md-6 col-12 py-2">
+                    <label for="">Tên đăng nhập hoặc email *</label>
+                    <input class="w-90" type="text" name="" id="">
+                  </div>
+                  <div class="col-md-6 col-12 py-2">
+                    <label for="">Mật khẩu *</label>
+                    <input class="w-90" type="password" name="" id="">
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <a href="./cart.html" class="update text-center text-light d-block p-2">
+                    ĐĂNG NHẬP
+                  </a>
+                  <form class="ps-3" action="">
+                    <input type="checkbox" id="" name="" value="Bike">
+                    <label for=""> Ghi nhớ mật khẩu</label><br>
+                  </form>
+                </div>
+                <p>Quên mật khẩu</p>   </div>
         </div>
       </div>
-      <div class="d-flex align-items-center">
-        <a href="./cart.html" class="update text-center text-light d-block p-2">
-          ĐĂNG NHẬP
-        </a>
-        <form class="ps-3" action="">
-          <input type="checkbox" id="" name="" value="Bike">
-          <label for=""> Ghi nhớ mật khẩu</label><br>
-        </form>
-      </div>
-      <p>Quên mật khẩu</p>
-      <p> Bạn có mã ưu đãi? Ấn vào đây để nhập mã</p>
-      <div class="row dashed">
-        <div class="px-5 py-3">
-          <p>Nếu bạn có mã giảm giá, vui lòng điền vào phía bên dưới.</p>
-          <div class="row">
-            <input class="col-10" type="text" name="" id="" placeholder="Mã ưu đãi">
-            <a href="#" class="col-2 update text-light text-center d-block p-2">
-              ÁP DỤNG
-            </a>
+      <!-- Ấn vao đây để nhập mã -->
+      <div class="">
+        <p>
+          Bạn có mã ưu đãi?
+          <a class="show" data-bs-toggle="collapse" href="#collapseExample2" role="button" 
+            aria-expanded="false" aria-controls="collapseExample2">
+            Ấn vào đây để nhập mã
+          </a>
+        </p>
+        <div class="collapse" id="collapseExample2">
+          <div class="card card-body">
+            <div class="row dashed">
+              <div class="px-5 py-3">
+                <p>Nếu bạn có mã giảm giá, vui lòng điền vào phía bên dưới.</p>
+                <div class="row">
+                  <input class="col-10" type="text" name="" id="" placeholder="Mã ưu đãi">
+                  <a href="#" class="col-2 update text-light text-center d-block p-2">
+                    ÁP DỤNG
+                  </a>
+                </div>
+              </div>
+            </div> 
           </div>
         </div>
       </div>
+      
       <div class="row">
         <div class="col-12 col-md-7 justify-content-center">
+      <!-- THÔNG TIN THANH TOÁN -->
           <div class="row">
             <div class="col-12 py-2">THÔNG TIN THANH TOÁN</div>
             <div class="col-md-6 py-2">
@@ -275,48 +304,67 @@
               <label for="">Địa chỉ email *</label>
               <input class="w-100" type="text" name="" id="">
             </div>
-            <!-- Tạo tài khoản mới? -->
-            <form action="">
-              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-              <label for="vehicle1"> Tạo tài khoản mới</label><br>
-            </form>
-            <div class="col-md-12 py-2">
-              <label for="">Tạo mật khẩu của tài khoản *</label>
-              <input class="w-100" type="password" name="" id="" placeholder="Mật khẩu">
+           <!-- Tạo tài khoản mới? -->
+            <div class="">
+              <p>
+                <button class="show" data-bs-toggle="collapse" href="#collapseExample3" role="button" 
+                  aria-expanded="false" aria-controls="collapseExample3">
+                    <input class="show" type="checkbox" id="vehicle3" name="vehicle3" value="Bike">
+                    <label for="vehicle3"> Tạo tài khoản mới?</label><br>
+                </button>
+              </p>
+              <div class="collapse" id="collapseExample3">
+                <div class="card card-body">
+                  <div class="row">
+                    <div class="col-md-12 py-2">
+                      <label for="">Tạo mật khẩu của tài khoản *</label>
+                      <input class="w-100" type="password" name="" id="" placeholder="Mật khẩu">
+                    </div>
+                  </div> 
+                </div>
+              </div>
             </div>
-          </div>
-          <!-- Giao hàng tới địa chỉ khác? -->
-          <form action="">
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-            <label for="vehicle1">Giao hàng tới địa chỉ khác?</label><br>
-          </form>
-          <div class="row">
-
-            <div class="col-md-6 col-12 py-2">
-              <label for="">Tên *</label>
-              <input class="w-90" type="text" name="" id="">
+            <!-- Giao hàng tới địa chỉ khác? -->
+            <div class="">
+              <p>
+                <button class="show" data-bs-toggle="collapse" href="#collapseExample4" role="button" 
+                  aria-expanded="false" aria-controls="collapseExample4">
+                    <input class="show" type="checkbox" id="vehicle4" name="vehicle4" value="Bike">
+                    <label for="vehicle4"> Giao hàng tới địa chỉ khác?</label><br>
+                </button>
+              </p>
+              <div class="collapse" id="collapseExample4">
+                <div class="card card-body">
+                  <div class="row">
+                    <div class="col-md-6 col-12 py-2">
+                      <label for="">Tên *</label>
+                      <input class="w-90" type="text" name="" id="">
+                    </div>
+                    <div class="col-md-6 col-12 py-2">
+                      <label for="">Tên *</label>
+                      <input class="w-90" type="text" name="" id="">
+                    </div>
+                  </div>
+                  <div class="col-md-12 py-2">
+                    <label for="country">Quốc gia *</label>
+                    <select class="w-100" id="country" name="country">
+                      <option value="Việt Nam">Việt Nam</option>
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                    </select>
+                  </div>
+                  <div class="col-md-12 py-2">
+                    <label for="country">Ghi chú đơn hàng (tuỳ chọn)</label>
+                    <textarea id="subject" name="subject" cols="4" class="w-100"
+                    placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." 
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-6 col-12 py-2">
-              <label for="">Tên *</label>
-              <input class="w-90" type="text" name="" id="">
-            </div>
+            
           </div>
-          <div class="col-md-12 py-2">
-            <label for="country">Quốc gia *</label>
-            <select class="w-100" id="country" name="country">
-              <option value="Việt Nam">Việt Nam</option>
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
-            </select>
-          </div>
-          <div class="col-md-12 py-2">
-            <label for="country">Ghi chú đơn hàng (tuỳ chọn)</label>
-            <textarea id="subject" name="subject" cols="4" class="w-100"
-            placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." 
-            ></textarea>
-          </div>
-          
         </div>
         <div class="col-12 col-md-5 p-2">
           <div class="">
@@ -347,7 +395,7 @@
                   <div class="">Tổng</div>
                   <div class="">162,780,000 ₫</div>
                 </div>
-                <form class="bor_1 p-2" action="">
+                <!-- <form class="bor_1 p-2" action="">
                   <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
                   <label for="vehicle1"> Trả tiền mặt khi nhận hàng</label><br>
                   <p>Trả tiền mặt khi nhận hàng</p>
@@ -356,7 +404,43 @@
                   <input type="checkbox" id="vehicle1" name="vehicle2" value="Bike">
                   <label for="vehicle2"> Chuyển khoản ngân hàng</label><br>
                   <p>Thực hiện thanh toán vào ngay tài khoản ngân hàng của chúng tôi. Vui lòng sử dụng Mã đơn hàng của bạn trong phần Nội dung thanh toán. Đơn hàng sẽ đươc giao sau khi tiền đã chuyển.</p>
-                </form>
+                </form> -->
+
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                <!-- Trả tiền mặt khi nhận hàng -->
+                 <!-- Giao hàng tới địa chỉ khác? -->
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <input type="checkbox" id="vehicle5" name="vehicle5" value="Bike">
+                        <label for="vehicle5"> Trả tiền mặt khi nhận hàng</label><br>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <p>Trả tiền mặt khi nhận hàng</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <input type="checkbox" id="vehicle6" name="vehicle6" value="Bike">
+                        <label for="vehicle6"> Chuyển khoản ngân hàng</label><br>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <p>Thực hiện thanh toán vào ngay tài khoản ngân hàng của chúng tôi. Vui lòng sử dụng Mã đơn hàng của bạn trong phần Nội dung thanh toán. Đơn hàng sẽ đươc giao sau khi tiền đã chuyển.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               
+                
+               </div>
                 <div class="p-2">
 
                   <a href="#" class="thanhtoan text-center text-light d-block p-2"

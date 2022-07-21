@@ -170,15 +170,16 @@
               <li class="nav-item t py-3 px-4 d-block">
                 <a class="a-nav" href="hot.html">ĐỒNG HỒ NỮ</a>
               </li>
-              <li class="nav-item t py-3 px-4 d-block dropdown">
-                <a class="a-nav dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  BRANDS
+              <li class="nav-item brands t py-3 px-4 d-block position-relative">
+                <a class="a-nav " href="brands.html">
+                  BRANDS 
+                  <i class="a-nav fa fa-angle-down" aria-hidden="true"></i>
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                  <li><a class="dropdown-item" href="#">CITIZEN</a></li>
-                  <li><a class="dropdown-item" href="#">ROLEX</a></li>
-                  <li><a class="dropdown-item" href="#">CASIO</a></li>
-                </ul>
+                <div class="brands-menu py-2">
+                  <a class="py-2 px-3 fw-normal brands-item" href="hot.html">CITIZEN</a>
+                  <a class="py-2 px-3 fw-normal brands-item" href="hot.html">ROLEX</a>
+                  <a class="py-2 px-3 fw-normal brands-item" href="hot.html">CASIO</a>
+                </div>
               </li>
               <li class="nav-item t py-3 px-4 d-block">
                 <a class="a-nav" href="lienhe.html">LIÊN HỆ</a>
@@ -230,15 +231,13 @@
                   <div class="px-2 pb-3 d-flex justify-content-center align-items-center">
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                   </div>
-                  <a class="" href='https://preview.colorlib.com'>
-                    <p>319 C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</p>
-                  </a>
+                  <p class="fs-6">319 C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</p>
                 </div>
                 <div class=" d-flex">
                   <div class="px-2 pb-3 d-flex justify-content-center align-items-center">
                     <i class="fa fa-phone"></i>
                   </div>
-                  <a class="" href="tel:0769220162">
+                  <a class="a-cart fs-6" href="tel:0769220162">
                     <p>0769220162</p>
                   </a>
                 </div>
@@ -246,10 +245,10 @@
                   <div class="px-2 pb-3 d-flex justify-content-center align-items-center">
                     <i class="fa fa-envelope"></i>
                   </div>
-                  <a class="" href="mailto:demonhunterg@gmail.com">
+                  <a class="a-cart fs-6" href="mailto:demonhunterg@gmail.com">
                     <p>demonhunterg@gmail.com</p>
                   </a>
-                  <a class="" href="mailto:mon@mona.media">
+                  <a class="a-cart fs-6" href="mailto:mon@mona.media">
                     <p>mon@mona.media</p>
                   </a>
 
@@ -258,7 +257,7 @@
                   <div class="px-2 pb-3 d-flex justify-content-center align-items-center">
                     <i class="fa fa-skype" aria-hidden="true"></i>
                   </div>
-                  <a class="" href="skype:demonhunterp">
+                  <a class="a-cart fs-6" href="skype:demonhunterp">
                     <p>demonhunterp</p>
                   </a>
                 </div>
@@ -275,47 +274,44 @@
               <h1 class="icon-logo">LIÊN HỆ VỚI CHÚNG TÔI</h1>
             </div>
             <div class="p-1">
-              <div class="row p-2">
-                <div class="col-md-6">
-                  <div class="form-row w50">
-                    <span class="wpcf7-form-control-wrap text-name">
-                      <input type="text" name="text-name" value="" size="30" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form_lien_he" id="text-name" aria-required="true" aria-invalid="false" placeholder="Họ và tên"></span>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-row w50">
-                    <span class="wpcf7-form-control-wrap email-contact">
-                      <input type="email" name="email-contact" value="" size="30" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form_lien_he" id="email-contact" aria-required="true" aria-invalid="false" placeholder="Email"></span>
-                    </div>
-                </div>
-                
-              </div>
-              <div class="row p-2">
-                <div class="col-md-6">
-                  <div class="form-row w50">
-                    <span class="wpcf7-form-control-wrap tel-contact">
-                      <input type="tel" name="tel-contact" value="" size="30" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form_lien_he" id="tel-contact" aria-required="true" aria-invalid="false" placeholder="Số điện thoại"></span>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-row w50">
-                    <span class="wpcf7-form-control-wrap text-address">
-                      <input type="text" name="text-address" value="" size="30" class="wpcf7-form-control wpcf7-text form_lien_he" id="text-address" aria-invalid="false" placeholder="Địa chỉ"></span>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <div class="row p-2">
-              <div class="col-md-12">
-                <div class="form-row">
-                  <span class="wpcf7-form-control-wrap textarea-noidung">
-                    <textarea name="textarea-noidung" cols="70" rows="5" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form_lien_he" id="textarea-noidung" aria-required="true" aria-invalid="false" placeholder="Lời nhắn"></textarea></span>
+              <div class="row ">
+                <div class="col-md-6 col-12">
+                  <div class="py-2 pe-3">
+                    <span class="input-lienhe p-2 text-name">
+                      <input type="text" name="text-name" value="" class="
+                      form_lien_he" id="text-name" aria-required="true" aria-invalid="false" placeholder="Họ và tên"></span>
                   </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="py-2 pe-3">
+                    <span class="input-lienhe p-2 email-contact">
+                      <input type="email" name="email-contact" value=""  
+                      class="form_lien_he" id="email-contact" aria-required="true" aria-invalid="false" placeholder="Email"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="py-2 pe-3">
+                    <span class="input-lienhe p-2 tel-contact">
+                      <input type="tel" name="tel-contact" value=""  class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form_lien_he" id="tel-contact" aria-required="true" aria-invalid="false" placeholder="Số điện thoại"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="py-2 pe-3">
+                    <span class="input-lienhe p-2 text-address">
+                      <input type="text" name="text-address" value=""  class="wpcf7-form-control wpcf7-text form_lien_he" id="text-address" aria-invalid="false" placeholder="Địa chỉ"></span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="py-2 px-1">
+                    <span class="input-lienhe textarea-noidung">
+                      <textarea name="textarea-noidung" cols="70"  class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form_lien_he" id="textarea-noidung" aria-required="true" aria-invalid="false" placeholder="Lời nhắn"></textarea></span>
+                    </div>
+                </div>
               </div>
             </div>
-                <div class="form-row text-center ">
+                <div class=" text-center ">
                   <input style="width: 200px;" type="submit" value="Gửi" 
-                  class="mua-ngay wpcf7-form-control wpcf7-submit form_lien_he" id="bt-gui">
+                  class="update border-0 py-2 wpcf7-form-control wpcf7-submit form_lien_he" id="bt-gui">
                   <span class="ajax-loader"></span>
                 </div>
           </div>
@@ -492,8 +488,10 @@
             <div class="text-f">
               <p>Đăng ký để nhận được được thông tin mới nhất từ chúng tôi.</p>
             </div>
-            <input class="p-2" type="email" placeholder="Email..." size="40">
-            <i class="fas fa-paper-plane"></i>
+            <div class="email position-relative">
+              <input class="p-2 w-100" type="email" placeholder="Email...">
+              <i class="plane py-3 fa fa-paper-plane"></i>
+            </div>
           </div>
         </div>
       </div>

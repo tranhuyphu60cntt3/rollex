@@ -22,18 +22,148 @@
   <link rel="stylesheet" href="./slick/slick.css">
   <link rel="stylesheet" href="./slick/slick-theme.css">
 
-
 <body>
   <div class="hot">
-    <header id="header" class="">
-      <div class="container d-none d-sm-none d-md-block py-3">
-        <div class="d-flex justify-content-between">
-          <div class="logo-header">
-            <img src="./images/header/logo.png" style="height: 70px;"
-              alt="logo-header">
+    <header id="header">
+      <div class=""> 
+      <div>
+      <div id="mySidenav-bg" class="mySidenav-bg"> </div>
+      <div id="mySidenav-filter" class="mySidenav-filter ">
+        <div class="d-lg-none d-md-flex d-flex justify-content-md-between justify-content-between 
+        align-content-md-center align-content-center">
+          <span class="d-inline p-3 fw-bolder" style="font-size:30px;cursor:pointer" 
+            onclick="openNav()">&#9776;</span>
+          <div class="logo-header d-inline p-1">
+            <a title="Giỏ hàng" href="./index.html">
+              <img src="./images/header/logo.png" style="height: 70px;"alt="logo-header">
+            </a>
           </div>
           <!-- tìm kiếm -->
-          <div class="nav d-flex ">
+          <div>
+            <div id="mb-mySidenav-bg" class="mb-mySidenav-bg"> </div>
+            <div id="mb-mb-mySidenav-filter" class="mb-mb-mySidenav-filter ">
+              <div class="">
+                <span class="fw-bolder" style="font-size:30px;cursor:pointer" onclick="mb_openNav()">
+                  <div id="cart" title="Giỏ hàng" class=" p-4" href="">
+                    <div class="cart-mb cart gio">
+                      <p>1</p>
+                      <div class="o"></div>
+                      
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div id="mb-mySidenav" class="mb-mySidenav overflow-auto">
+              <a id="mb-mySidenav-close" href="javascript:void(0)" class="mb-mySidenav-close" onclick="mb_closeNav()">&times;</a>
+              <div class="cart-header_gio-mb text-center">
+                <div class="p-3 d-flex justify-content-center">
+                  <table class="table-cart">
+                    <tr>
+                      <td colspan="3">
+                        <p style="color: #cbba9c;">Tổng phụ: <b style="color: #000;">14,619,000₫</b></p> 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3">
+                        <a href="./cart.html" class="update text-light text-center d-block p-2">
+                          XEM GIỎ HÀNG
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3">
+                        <a href="./thanhtoan.html" class="thanhtoan text-center text-light d-block p-2">
+                          THANH TOÁN
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+        </div>
+      </div>
+      <div id="mySidenav" class="mySidenav overflow-auto">
+        <a id="mySidenav-close" href="javascript:void(0)" class="mySidenav-close" onclick="closeNav()">&times;</a>
+        
+        <div class="pt-5 me-auto my-2 " style="--bs-scroll-height: 100px;">
+        <form class="d-flex px-3 w-100">
+          <input class="form-control " type="search" placeholder="Tìm kiếm..." aria-label="Search">
+          <button style="background-color: #cbba9c;" class="btn btn-outline-success" type="submit">
+            <i  class="fa fa-search search" aria-hidden="true"></i>
+          </button>
+        </form>
+        <div class="nav-item_header-mb py-3 px-1 d-block">
+          <a class="px-3 a-nav" aria-current="page" href="./index.html">TRANG CHỦ</a>
+        </div>
+        <div class="nav-item_header-mb t py-3 px-1 d-block">
+          <a class="px-3 a-nav" href="hot.html">SẢN PHẨM HOT</a>
+        </div>
+        <div class="nav-item_header-mb t py-3 px-1 d-block">
+          <a class="px-3 a-nav" href="hot.html">SALE</a>
+        </div>
+        <div class="nav-item_header-mb t py-3 px-1 d-block">
+          <a class="px-3 a-nav" href="hot.html">ĐỒNG HỒ NAM</a>
+        </div>
+        <div class="nav-item_header-mb t py-3 px-1 d-block">
+          <a class="px-3 a-nav" href="hot.html">ĐỒNG HỒ NỮ</a>
+        </div>
+        <div class="nav-item_header-mb brands t ">
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <a style="font-size: .8rem;" class="a-nav" href="brands.html">
+                      BRANDS
+                    </a>
+                    <label for="vehicle5"> </label><br>
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="">
+                      <a class="py-2 px-3 fw-normal brands-item" href="hot.html">CITIZEN</a>
+                      <a class="py-2 px-3 fw-normal brands-item" href="hot.html">ROLEX</a>
+                      <a class="py-2 px-3 fw-normal brands-item" href="hot.html">CASIO</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item_header-mb t py-3 px-1 d-block">
+          <a class="px-3 a-nav" href="lienhe.html">LIÊN HỆ</a>
+        </div>
+        <div class="nav-item_header-mb t py-3 px-1 d-block">
+          <a class="px-3 a-nav" href="gioithieu.html">GIỚI THIỆU</a>
+        </div>
+        <div class="d-flex nav-item_header-mb t py-3 px-1 ">
+          <a class="px-3 a-nav" href="dangnhap.html">ĐĂNG NHẬP</a>
+        </div>
+        <div class="d-flex t py-3 px-1">
+          <div class="phone animate__animated animate__delay-3s animate__infinite animate__tada "></div>
+          <div class="fw-bolder">
+            <p>&nbsp; HOT LINE &nbsp;<a class="sdt" href="tel:+076 922 0162"> 098 087 866</a></p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="mySidenav-pc">
+      <div class="px-5">
+        <div class="d-flex justify-content-between py-2">
+          <div class="logo-header">
+            <a title="Giỏ hàng" href="./index.html">
+              <img src="./images/header/logo.png" style="height: 70px;"alt="logo-header">
+            </a>
+          </div>
+          <!-- tìm kiếm -->
+          <div class="nav d-flex align-content-center">
             <a class="gach search px-4 py-3" href="#">
               <i class=" fa fa-search" aria-hidden="true"></i>
               <div class="s">
@@ -50,8 +180,7 @@
             <a class="gach px-4 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <i class=" fa fa-user" aria-hidden="true"></i>
             </a>
-            <a id="cart" title="Giỏ hàng" class="px-4 py-3 d-flex" 
-            href="./cart.html"
+            <a id="cart" title="Giỏ hàng" class="px-4 py-3 d-flex" href="./cart.html"
             data-bs-toggle="" data-bs-target="">
               <p class="gia">14,619,000  đ</p>
               <div class="cart gio">
@@ -62,7 +191,7 @@
                     <table class="table-cart">
                       <tr>
                         <td colspan="3">
-                          <p style="color: #cbba9c;">Tổng phụ: <b style="color: #000;">14,619,000₫</b></p> 
+                          <p style="color: #cbba9c;">Tổng phụ: <b style="color: #000;">14,619,000 ₫</b></p> 
                         </td>
                       </tr>
                       <tr>
@@ -84,8 +213,6 @@
                 </div>
               </div>
             </a>
-
-             
             <!-- Modal login -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -125,83 +252,49 @@
           </div>
         </div>
       </div>
-      <nav id="nav" class="menu navbar navbar-expand-lg navbar-light">
-        <div class="container flex-row-reverse flex-sm-row-reverse">
-          <div class="d-md-none navbar-brand">
-            <a class="p-3 d-flex" href="cart.html">
-              <div class="cart cart-header">
-                <p>+</p>
-                <div class="o"></div>
+
+      <!-- menu -->
+      <div class="menu-header">
+        <div class="container">
+          <div class="d-flex">
+            <div class="nav-item py-4 px-4 d-block">
+              <a class="a-nav" aria-current="page" href="./index.html">TRANG CHỦ</a>
+            </div>
+            <div class="nav-item t py-4 px-4 d-block">
+              <a class="a-nav" href="hot.html">SẢN PHẨM HOT</a>
+            </div>
+            <div class="nav-item t py-4 px-4 d-block">
+              <a class="a-nav" href="hot.html">SALE</a>
+            </div>
+            <div class="nav-item t py-4 px-4 d-block">
+              <a class="a-nav" href="hot.html">ĐỒNG HỒ NAM</a>
+            </div>
+            <div class="nav-item t py-4 px-4 d-block">
+              <a class="a-nav" href="hot.html">ĐỒNG HỒ NỮ</a>
+            </div>
+            <div class="nav-item brands t py-4 px-4 d-block position-relative">
+              <a class="a-nav " href="brands.html">
+                BRANDS 
+                <i class="a-nav fa fa-angle-down" aria-hidden="true"></i>
+              </a>
+              <div class="brands-menu py-2">
+                <a class="py-2 px-3 fw-normal brands-item" href="hot.html">CITIZEN</a>
+                <a class="py-2 px-3 fw-normal brands-item" href="hot.html">ROLEX</a>
+                <a class="py-2 px-3 fw-normal brands-item" href="hot.html">CASIO</a>
               </div>
-            </a>
-            
-          </div>
-          <div class="d-md-none navbar-brand">
-            <a class="" href="#">
-              <div class="logo-header">
-                <img src="./images/header/logo.png" style="height: 70px;"
-                  alt="logo-header">
-              </div>
-            </a>
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse " id="navbarScroll">
-            <ul class="d-flex flex-lg-grow-0  navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <form class="d-flex nav-item p-2 d-sm-block d-md-none w-90">
-                <input class="form-control " type="search" placeholder="Tìm kiếm..." aria-label="Search">
-                <button style="background-color: #cbba9c;" class="btn btn-outline-success" type="submit">
-                  <i  class="fa fa-search search" aria-hidden="true"></i>
-                </button>
-              </form>
-              <p></p>
-              <li class="nav-item py-3 px-4 d-block">
-                <a class="a-nav" aria-current="page" href="./index.html">TRANG CHỦ</a>
-              </li>
-              <li class="nav-item t py-3 px-4 d-block">
-                <a class="a-nav" href="hot.html">SẢN PHẨM HOT</a>
-              </li>
-              <li class="nav-item t py-3 px-4 d-block">
-                <a class="a-nav" href="hot.html">SALE</a>
-              </li>
-              <li class="nav-item t py-3 px-4 d-block">
-                <a class="a-nav" href="hot.html">ĐỒNG HỒ NAM</a>
-              </li>
-              <li class="nav-item t py-3 px-4 d-block">
-                <a class="a-nav" href="hot.html">ĐỒNG HỒ NỮ</a>
-              </li>
-              <li class="nav-item t py-3 px-4 d-block dropdown">
-                <a class="a-nav dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  BRANDS
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                  <li><a class="dropdown-item" href="#">CITIZEN</a></li>
-                  <li><a class="dropdown-item" href="#">ROLEX</a></li>
-                  <li><a class="dropdown-item" href="#">CASIO</a></li>
-                </ul>
-              </li>
-              <li class="nav-item t py-3 px-4 d-block">
-                <a class="a-nav" href="lienhe.html">LIÊN HỆ</a>
-              </li>
-              <li class="nav-item t py-3 px-4 d-block">
-                <a class="a-nav" href="gioithieu.html">GIỚI THIỆU</a>
-              </li>
-              <li class="d-flex nav-item t py-3 px-4 d-block d-sm-block d-md-none">
-                <a class="a-nav" href="gioithieu.html">ĐĂNG NHẬP</a>
-              </li>
-              <li class="d-flex nav-item t py-3 px-4 d-block d-sm-block d-md-none">
-                <div class="phone animate__animated animate__delay-3s animate__infinite animate__tada "></div>
-                <div class="fw-bolder">
-                  <p>&nbsp; HOT LINE &nbsp;<a class="sdt" href="tel:+076 922 0162"> 098 087 866</a></p>
-                </div>
-                
-              </li>
-            </ul>
-            
+            </div>
+            <div class="nav-item t py-4 px-4 d-block">
+              <a class="a-nav" href="lienhe.html">LIÊN HỆ</a>
+            </div>
+            <div class="nav-item t py-4 px-4 d-block">
+              <a class="a-nav" href="gioithieu.html">GIỚI THIỆU</a>
+            </div>
           </div>
         </div>
-      </nav>
+      </div>
+
+    </div>
+      </div>
     </header>
    
     <div class="d-lg-flex d-inline justify-content-between container py-3">
@@ -234,35 +327,42 @@
 
     </div>
     <div class="container-fluid">
-      <div class="row ">
-        <nav class="col-md-3 d-md-none  nav-hot navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav ">
-                <li class="nav-item">
-                  <aside class="widget nav-link active">
+    <!-- <<<<< -->
+      <!-- nav-hhot -->
+      <div class="nav-hot"> 
+        <div class="w-100" style="height: 50px;">
+          <div id="hot-mySidenav-bg" class="hot-mySidenav-bg"> </div>
+            <div id="hot-mySidenav-filter" style="padding-left: calc(50% - 50px);" 
+              class="hot-mySidenav-filter" >
+              <span class="fw-bolder" style="font-size:30px;cursor:pointer" onclick="hot_openNav()">&#9776; LỌC</span>
+            </div>
+            <div id="hot-mySidenav" class="hot-mySidenav overflow-auto">
+              <a id="hot-mySidenav-close" href="javascript:void(0)" class="hot-mySidenav-close" onclick="hot_closeNav()">&times;</a>
+                <div class="sidebar-inner col-inner">
+                  <aside class="widget ">
                     <span
                       class="widget-title shop-sidebar">DANH MỤC SẢN PHẨM</span>
                     <div class="is-divider small"></div>
                     <ul class="product-categories ul border">
-                      <li class="p-1 border-bottom  ">
+                      <li class="p-1 border-bottom ">
                         <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
                           href="./hot.html">Casio</a>
                       </li>
-                      <li class="p-1 border-bottom  "><a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
+                      <li class="p-1 border-bottom  ">
+                        <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
                           href="./hot.html">Citizen</a>
                       </li>
-                      <li class="p-1 border-bottom  "><a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
+                      <li class="p-1 border-bottom  ">
+                        <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
                           href="./hot.html">Đồng hồ cặp đôi</a></li>
-                      <li class="p-1 border-bottom  "><a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
+                      <li class="p-1 border-bottom  ">
+                        <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
                           href="./hot.html">Đồng hồ nam</a></li>
-                      <li class="p-1 border-bottom  "><a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
+                      <li class="p-1 border-bottom  ">
+                        <a class="hv000" class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
                           href="./hot.html">Đồng hồ nữ</a></li>
-                      <li class="p-1 border-bottom  "><a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
+                      <li class="p-1 border-bottom  ">
+                        <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
                           href="./hot.html">ROLEX</a>
                       </li>
                       <li class="p-1 border-bottom  "><a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
@@ -275,341 +375,362 @@
                       </li>
                     </ul>
                   </aside>
-                </li>
-                <li class="nav-item ">
                   <aside 
+                    class="widget woocommerce widget_price_filter">
+        
+                    <div class="w-90 ">
+                      <div class="d-block">
+                        <label for="customRange2" class="form-label">LỌC THEO GIÁ</label>
+                      </div>
+                      <!-- LOC -->
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-12">
+                            <div  id="slider-range"></div>
+                          </div>
+                        </div>
+                        <div class="d-flex slider-labels">
+                          <div class="caption pe-2">
+                            <div class="loc px-3 py-1">LỌC</div>
+                          </div>
+                          <div class="caption">
+                            <strong>Giá:</strong> <span id="slider-range-value1"></span>
+                            <strong>-</strong> <span id="slider-range-value2"></span>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <form>
+                              <input type="hidden" name="min-value" value="">
+                              <input type="hidden" name="max-value" value="">
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    
+                  </aside>
+                  <aside id="woocommerce_products-3"
+                    class="widget woocommerce widget_products"><span
+                      class="widget-title shop-sidebar">Quan tâm</span>
+                    <div class="is-divider "></div>
+                    <ul class="product_list_widget ul border">
+                      <li>
+                        <div class="d-flex" >
+                          <div class="flex-1">
+                            <a href="#">
+                              <img width="80" height="80"src="./images/products/clock1.jpg"class="" alt=""> 
+                            </a>
+                          </div>
+                          <div class="flex-2">
+                            <a href="#">
+                              <span style="color: #334862;font-size: 14px; font-weight: 450;" 
+                              class="product-title hv000">
+                                BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
+                              </span>
+                            </a>
+                            <del>
+                              <span style="color: black;">15,400,000₫</span>
+                            </del>
+                            <ins>
+                              <b style="color: black;" class="fw-bold">14,000,000₫</b>
+                            </ins>
+                          </div>                  
+                        </div>
+                        
+                      </li>
+                      <li>
+                        <div class="d-flex" >
+                          <div class="flex-1">
+                            <a href="#">
+                              <img width="80" height="80"src="./images/products/clock2.jpg"class="" alt=""> 
+                            </a>
+                          </div>
+                          <div class="flex-2">
+                            <a href="#">
+                              <span style="color: #334862;font-size: 14px; font-weight: 450;" 
+                              class="product-title hv000">
+                                BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
+                              </span>
+                            </a>
+                            <del>
+                              <span style="color: black;">15,400,000₫</span>
+                            </del>
+                            <ins>
+                              <b style="color: black;" class="fw-bold">14,000,000₫</b>
+                            </ins>
+                          </div>                  
+                        </div>
+                        
+                      </li>
+                      <li>
+                        <div class="d-flex" >
+                          <div class="flex-1">
+                            <a href="#">
+                              <img width="80" height="80"src="./images/products/clock3.jpg"class="" alt=""> 
+                            </a>
+                          </div>
+                          <div class="flex-2">
+                            <a href="#">
+                              <span style="color: #334862;font-size: 14px; font-weight: 450;" 
+                              class="product-title hv000">
+                                BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
+                              </span>
+                            </a>
+                            <del>
+                              <span style="color: black;">15,400,000₫</span>
+                            </del>
+                            <ins>
+                              <b style="color: black;" class="fw-bold">14,000,000₫</b>
+                            </ins>
+                          </div>                  
+                        </div>
+                        
+                      </li>
+                      <li>
+                        <div class="d-flex" >
+                          <div class="flex-1">
+                            <a href="#">
+                              <img width="80" height="80"src="./images/products/clock4.jpg"class="" alt=""> 
+                            </a>
+                          </div>
+                          <div class="flex-2">
+                            <a href="#">
+                              <span style="color: #334862;font-size: 14px; font-weight: 450;" 
+                              class="product-title hv000">
+                                BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
+                              </span>
+                            </a>
+                            <del>
+                              <span style="color: black;">15,400,000₫</span>
+                            </del>
+                            <ins>
+                              <b style="color: black;" class="fw-bold">14,000,000₫</b>
+                            </ins>
+                          </div>                  
+                        </div>
+                        
+                      </li>
+                    </ul>
+                  </aside>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 ">
+            <div class="hot-mySidenav-pc">
+              <div class="sidebar-inner col-inner">
+                <aside class="widget ">
+                  <span
+                    class="widget-title shop-sidebar">DANH MỤC SẢN PHẨM</span>
+                  <div class="is-divider small"></div>
+                  <ul class="product-categories ul border">
+                    <li class="p-1 border-bottom ">
+                      <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
+                        href="./hot.html">Casio</a>
+                    </li>
+                    <li class="p-1 border-bottom  ">
+                      <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
+                        href="./hot.html">Citizen</a>
+                    </li>
+                    <li class="p-1 border-bottom  ">
+                      <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
+                        href="./hot.html">Đồng hồ cặp đôi</a></li>
+                    <li class="p-1 border-bottom  ">
+                      <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
+                        href="./hot.html">Đồng hồ nam</a></li>
+                    <li class="p-1 border-bottom  ">
+                      <a class="hv000" class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
+                        href="./hot.html">Đồng hồ nữ</a></li>
+                    <li class="p-1 border-bottom  ">
+                      <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
+                        href="./hot.html">ROLEX</a>
+                    </li>
+                    <li class="p-1 border-bottom  "><a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
+                        href="./hot.html">Sale</a>
+                    </li>
+                    <li class="p-1   current-cat active">
+                      <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;" href="./hot.html">
+                        Sản phẩm Hot
+                      </a>
+                    </li>
+                  </ul>
+                </aside>
+                <aside 
                   class="widget woocommerce widget_price_filter">
+      
                   <div class="w-90 ">
                     <div class="d-block">
                       <label for="customRange2" class="form-label">LỌC THEO GIÁ</label>
                     </div>
+                    <!-- LOC -->
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12">
+                          <div  id="slider-range"></div>
+                        </div>
+                      </div>
+                      <div class="d-flex slider-labels">
+                        <div class="caption pe-2">
+                          <div class="loc px-3 py-1">LỌC</div>
+                        </div>
+                        <div class="caption">
+                          <strong>Giá:</strong> <span id="slider-range-value1"></span>
+                          <strong>-</strong> <span id="slider-range-value2"></span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <form>
+                            <input type="hidden" name="min-value" value="">
+                            <input type="hidden" name="max-value" value="">
+                          </form>
+                        </div>
+                      </div>
+                    </div>
                     
                   </div>
-                  <!-- LOC -->
-                  <!-- <div class="">
-                    <div class="row">
-                      <div class="col-12">
-                        <div id="slider-range"></div>
-                      </div>
-                    </div>
-                    <div class="d-flex slider-labels">
-                      <div class="caption pe-2">
-                        <div class="loc px-3 py-1">LỌC</div>
-                      </div>
-                      <div class="caption">
-                        <strong>Giá:</strong> <span id="slider-range-value1"></span>
-                        <strong>-</strong> <span id="slider-range-value2"></span>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <form>
-                          <input type="hidden" name="min-value" value="">
-                          <input type="hidden" name="max-value" value="">
-                        </form>
-                      </div>
-                    </div>
-                  </div> -->
-                 
+                  
                 </aside>
-                </li>
-                <li class="nav-item d-lg-block">
-                  <aside id="woocommerce_products-3"
-              class="widget woocommerce widget_products"><span
-                class="widget-title shop-sidebar">Quan tâm</span>
-              <div class="is-divider "></div>
-              <ul class="product_list_widget ul border">
-                <li>
-                  <div class="d-flex" >
-                    <div class="flex-1">
-                      <a href="#">
-                        <img width="80" height="80"src="./images/products/clock1.jpg"class="" alt=""> 
-                      </a>
-                    </div>
-                    <div class="flex-2">
-                      <a href="#">
-                        <span style="color: #334862;font-size: 14px; font-weight: 450;" 
-                        class="product-title hv000">
-                          BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
-                        </span>
-                      </a>
-                      <del>
-                        <span style="color: black;">15,400,000₫</span>
-                      </del>
-                      <ins>
-                        <b style="color: black;" class="fw-bold">14,000,000₫</b>
-                      </ins>
-                    </div>                  
-                  </div>
-                  
-                </li>
-                <li>
-                  <div class="d-flex" >
-                    <div class="flex-1">
-                      <a href="#">
-                        <img width="80" height="80"src="./images/products/clock2.jpg"class="" alt=""> 
-                      </a>
-                    </div>
-                    <div class="flex-2">
-                      <a href="#">
-                        <span style="color: #334862;font-size: 14px; font-weight: 450;" 
-                        class="product-title hv000">
-                          BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
-                        </span>
-                      </a>
-                      <del>
-                        <span style="color: black;">15,400,000₫</span>
-                      </del>
-                      <ins>
-                        <b style="color: black;" class="fw-bold">14,000,000₫</b>
-                      </ins>
-                    </div>                  
-                  </div>
-                  
-                </li>
-                <li>
-                  <div class="d-flex" >
-                    <div class="flex-1">
-                      <a href="#">
-                        <img width="80" height="80"src="./images/products/clock3.jpg"class="" alt=""> 
-                      </a>
-                    </div>
-                    <div class="flex-2">
-                      <a href="#">
-                        <span style="color: #334862;font-size: 14px; font-weight: 450;" 
-                        class="product-title hv000">
-                          BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
-                        </span>
-                      </a>
-                      <del>
-                        <span style="color: black;">15,400,000₫</span>
-                      </del>
-                      <ins>
-                        <b style="color: black;" class="fw-bold">14,000,000₫</b>
-                      </ins>
-                    </div>                  
-                  </div>
-                  
-                </li>
-                <li>
-                  <div class="d-flex" >
-                    <div class="flex-1">
-                      <a href="#">
-                        <img width="80" height="80"src="./images/products/clock4.jpg"class="" alt=""> 
-                      </a>
-                    </div>
-                    <div class="flex-2">
-                      <a href="#">
-                        <span style="color: #334862;font-size: 14px; font-weight: 450;" 
-                        class="product-title hv000">
-                          BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
-                        </span>
-                      </a>
-                      <del>
-                        <span style="color: black;">15,400,000₫</span>
-                      </del>
-                      <ins>
-                        <b style="color: black;" class="fw-bold">14,000,000₫</b>
-                      </ins>
-                    </div>                  
-                  </div>
-                  
-                </li>
-              </ul>
-            </aside>
-                </li>
-              </ul>
+                <aside id="woocommerce_products-3"
+                  class="widget woocommerce widget_products"><span
+                    class="widget-title shop-sidebar">Quan tâm</span>
+                  <div class="is-divider "></div>
+                  <ul class="product_list_widget ul border">
+                    <li>
+                      <div class="d-flex" >
+                        <div class="flex-1">
+                          <a href="#">
+                            <img width="80" height="80"src="./images/products/clock1.jpg"class="" alt=""> 
+                          </a>
+                        </div>
+                        <div class="flex-2">
+                          <a href="#">
+                            <span style="color: #334862;font-size: 14px; font-weight: 450;" 
+                            class="product-title hv000">
+                              BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
+                            </span>
+                          </a>
+                          <del>
+                            <span style="color: black;">15,400,000₫</span>
+                          </del>
+                          <ins>
+                            <b style="color: black;" class="fw-bold">14,000,000₫</b>
+                          </ins>
+                        </div>                  
+                      </div>
+                      
+                    </li>
+                    <li>
+                      <div class="d-flex" >
+                        <div class="flex-1">
+                          <a href="#">
+                            <img width="80" height="80"src="./images/products/clock2.jpg"class="" alt=""> 
+                          </a>
+                        </div>
+                        <div class="flex-2">
+                          <a href="#">
+                            <span style="color: #334862;font-size: 14px; font-weight: 450;" 
+                            class="product-title hv000">
+                              BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
+                            </span>
+                          </a>
+                          <del>
+                            <span style="color: black;">15,400,000₫</span>
+                          </del>
+                          <ins>
+                            <b style="color: black;" class="fw-bold">14,000,000₫</b>
+                          </ins>
+                        </div>                  
+                      </div>
+                      
+                    </li>
+                    <li>
+                      <div class="d-flex" >
+                        <div class="flex-1">
+                          <a href="#">
+                            <img width="80" height="80"src="./images/products/clock3.jpg"class="" alt=""> 
+                          </a>
+                        </div>
+                        <div class="flex-2">
+                          <a href="#">
+                            <span style="color: #334862;font-size: 14px; font-weight: 450;" 
+                            class="product-title hv000">
+                              BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
+                            </span>
+                          </a>
+                          <del>
+                            <span style="color: black;">15,400,000₫</span>
+                          </del>
+                          <ins>
+                            <b style="color: black;" class="fw-bold">14,000,000₫</b>
+                          </ins>
+                        </div>                  
+                      </div>
+                      
+                    </li>
+                    <li>
+                      <div class="d-flex" >
+                        <div class="flex-1">
+                          <a href="#">
+                            <img width="80" height="80"src="./images/products/clock4.jpg"class="" alt=""> 
+                          </a>
+                        </div>
+                        <div class="flex-2">
+                          <a href="#">
+                            <span style="color: #334862;font-size: 14px; font-weight: 450;" 
+                            class="product-title hv000">
+                              BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
+                            </span>
+                          </a>
+                          <del>
+                            <span style="color: black;">15,400,000₫</span>
+                          </del>
+                          <ins>
+                            <b style="color: black;" class="fw-bold">14,000,000₫</b>
+                          </ins>
+                        </div>                  
+                      </div>
+                      
+                    </li>
+                  </ul>
+                </aside>
+              </div>
             </div>
           </div>
-        </nav>
-  
-        <div class="col-md-3 d-md-block d-none ps-3">
-          <div class="sidebar-inner col-inner">
-            <aside class="widget ">
-              <span
-                class="widget-title shop-sidebar">DANH MỤC SẢN PHẨM</span>
-              <div class="is-divider small"></div>
-              <ul class="product-categories ul border">
-                <li class="p-1 border-bottom ">
-                  <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
-                    href="./hot.html">Casio</a>
-                </li>
-                <li class="p-1 border-bottom  ">
-                  <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
-                    href="./hot.html">Citizen</a>
-                </li>
-                <li class="p-1 border-bottom  ">
-                  <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
-                    href="./hot.html">Đồng hồ cặp đôi</a></li>
-                <li class="p-1 border-bottom  ">
-                  <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
-                    href="./hot.html">Đồng hồ nam</a></li>
-                <li class="p-1 border-bottom  ">
-                  <a class="hv000" class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
-                    href="./hot.html">Đồng hồ nữ</a></li>
-                <li class="p-1 border-bottom  ">
-                  <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
-                    href="./hot.html">ROLEX</a>
-                </li>
-                <li class="p-1 border-bottom  "><a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;"
-                    href="./hot.html">Sale</a>
-                </li>
-                <li class="p-1   current-cat active">
-                  <a class="hv000" style="color: #334862;font-size: 14px; font-weight: 450;" href="./hot.html">
-                    Sản phẩm Hot
-                  </a>
-                </li>
-              </ul>
-            </aside>
-            <aside 
-              class="widget woocommerce widget_price_filter">
-  
-              <div class="w-90 ">
-                <div class="d-block">
-                  <label for="customRange2" class="form-label">LỌC THEO GIÁ</label>
-                </div>
-                <!-- LOC -->
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-12">
-                      <div  id="slider-range"></div>
+          <div class="col-lg-9 col-md-12 p-lg-5">
+            <div class="row">
+              <div class="hot col-md-4 col-6 p-md-4">
+                <div class="border-1">
+    
+                  <div class="product-item ">
+                    <div class=" text-center d-flex justify-content-center">
+                      <img class="img-prd" style="width: 90%;max-height: 375px;"
+                        src="./images/products/clock1.jpg" alt="">
                     </div>
-                  </div>
-                  <div class="d-flex slider-labels">
-                    <div class="caption pe-2">
-                      <div class="loc px-3 py-1">LỌC</div>
+                    <div class="text-center" style="font-weight: 500;">
+                      <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                      <p class="text-decoration-line-through d-inline">76,000,000₫
+                        </p class="price">1,000,000₫</p>
+                      </p>
                     </div>
-                    <div class="caption">
-                      <strong>Giá:</strong> <span id="slider-range-value1"></span>
-                      <strong>-</strong> <span id="slider-range-value2"></span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <form>
-                        <input type="hidden" name="min-value" value="">
-                        <input type="hidden" name="max-value" value="">
-                      </form>
+                    <div class="cart btn-cart">
+                      <p>+</p>
+                      <div class="o"></div>
                     </div>
                   </div>
                 </div>
+    
               </div>
-              
-            </aside>
-            <aside id="woocommerce_products-3"
-              class="widget woocommerce widget_products"><span
-                class="widget-title shop-sidebar">Quan tâm</span>
-              <div class="is-divider "></div>
-              <ul class="product_list_widget ul border">
-                <li>
-                  <div class="d-flex" >
-                    <div class="flex-1">
-                      <a href="#">
-                        <img width="80" height="80"src="./images/products/clock1.jpg"class="" alt=""> 
-                      </a>
-                    </div>
-                    <div class="flex-2">
-                      <a href="#">
-                        <span style="color: #334862;font-size: 14px; font-weight: 450;" 
-                        class="product-title hv000">
-                          BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
-                        </span>
-                      </a>
-                      <del>
-                        <span style="color: black;">15,400,000₫</span>
-                      </del>
-                      <ins>
-                        <b style="color: black;" class="fw-bold">14,000,000₫</b>
-                      </ins>
-                    </div>                  
+              <div class="hot col-md-4 col-6 p-md-4">
+                <div class="product-item">
+                  <div class="sale-off d-flex justify-content-center text-light">
+                    <p>-90%</p>
                   </div>
-                  
-                </li>
-                <li>
-                  <div class="d-flex" >
-                    <div class="flex-1">
-                      <a href="#">
-                        <img width="80" height="80"src="./images/products/clock2.jpg"class="" alt=""> 
-                      </a>
-                    </div>
-                    <div class="flex-2">
-                      <a href="#">
-                        <span style="color: #334862;font-size: 14px; font-weight: 450;" 
-                        class="product-title hv000">
-                          BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
-                        </span>
-                      </a>
-                      <del>
-                        <span style="color: black;">15,400,000₫</span>
-                      </del>
-                      <ins>
-                        <b style="color: black;" class="fw-bold">14,000,000₫</b>
-                      </ins>
-                    </div>                  
-                  </div>
-                  
-                </li>
-                <li>
-                  <div class="d-flex" >
-                    <div class="flex-1">
-                      <a href="#">
-                        <img width="80" height="80"src="./images/products/clock3.jpg"class="" alt=""> 
-                      </a>
-                    </div>
-                    <div class="flex-2">
-                      <a href="#">
-                        <span style="color: #334862;font-size: 14px; font-weight: 450;" 
-                        class="product-title hv000">
-                          BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
-                        </span>
-                      </a>
-                      <del>
-                        <span style="color: black;">15,400,000₫</span>
-                      </del>
-                      <ins>
-                        <b style="color: black;" class="fw-bold">14,000,000₫</b>
-                      </ins>
-                    </div>                  
-                  </div>
-                  
-                </li>
-                <li>
-                  <div class="d-flex" >
-                    <div class="flex-1">
-                      <a href="#">
-                        <img width="80" height="80"src="./images/products/clock4.jpg"class="" alt=""> 
-                      </a>
-                    </div>
-                    <div class="flex-2">
-                      <a href="#">
-                        <span style="color: #334862;font-size: 14px; font-weight: 450;" 
-                        class="product-title hv000">
-                          BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM
-                        </span>
-                      </a>
-                      <del>
-                        <span style="color: black;">15,400,000₫</span>
-                      </del>
-                      <ins>
-                        <b style="color: black;" class="fw-bold">14,000,000₫</b>
-                      </ins>
-                    </div>                  
-                  </div>
-                  
-                </li>
-              </ul>
-            </aside>
-          </div>
-        </div>
-        <div class="col-md-9 col-12 p-lg-5">
-          <div class="row">
-            <div class="hot col-md-4 col-6 p-md-4">
-              <div class="border-1">
-
-                <div class="product-item ">
-                  <div class=" text-center d-flex justify-content-center">
+                  <div class="text-center d-flex justify-content-center">
                     <img class="img-prd" style="width: 90%;max-height: 375px;"
-                      src="./images/products/clock1.jpg" alt="">
+                      src="./images/products/clock2.jpg" alt="">
                   </div>
                   <div class="text-center" style="font-weight: 500;">
                     <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
@@ -622,119 +743,98 @@
                     <div class="o"></div>
                   </div>
                 </div>
+    
               </div>
-  
-            </div>
-            <div class="hot col-md-4 col-6 p-md-4">
-              <div class="product-item">
-                <div class="sale-off d-flex justify-content-center text-light">
-                  <p>-90%</p>
+              <div class="hot col-md-4 col-6 p-md-4">
+                <div class="product-item">
+                  <div class="sale-off d-flex justify-content-center text-light">
+                    <p>-90%</p>
+                  </div>
+                  <div class="text-center d-flex justify-content-center">
+                    <img class="img-prd" style="width: 90%;max-height: 375px;"
+                      src="./images/products/clock3.jpg" alt="">
+                  </div>
+                  <div class="text-center" style="font-weight: 500;">
+                    <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                    <p class="text-decoration-line-through d-inline">76,000,000₫
+                      </p class="price">1,000,000₫</p>
+                    </p>
+                  </div>
+                  <div class="cart btn-cart">
+                    <p>+</p>
+                    <div class="o"></div>
+                  </div>
                 </div>
-                <div class="text-center d-flex justify-content-center">
-                  <img class="img-prd" style="width: 90%;max-height: 375px;"
-                    src="./images/products/clock2.jpg" alt="">
-                </div>
-                <div class="text-center" style="font-weight: 500;">
-                  <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
-                  <p class="text-decoration-line-through d-inline">76,000,000₫
-                    </p class="price">1,000,000₫</p>
-                  </p>
-                </div>
-                <div class="cart btn-cart">
-                  <p>+</p>
-                  <div class="o"></div>
-                </div>
+    
               </div>
-  
-            </div>
-            <div class="hot col-md-4 col-6 p-md-4">
-              <div class="product-item">
-                <div class="sale-off d-flex justify-content-center text-light">
-                  <p>-90%</p>
+    
+              <div class="hot col-md-4 col-6 p-md-4">
+                <div class="product-item">
+                  <div class="text-center d-flex justify-content-center">
+                    <img class="img-prd" style="width: 90%;max-height: 375px;"
+                      src="./images/products/clock4.jpg" alt="">
+                  </div>
+                  <div class="text-center" style="font-weight: 500;">
+                    <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                    <p class="text-decoration-line-through d-inline">76,000,000₫
+                      </p class="price">1,000,000₫</p>
+                    </p>
+                  </div>
+                  <div class="cart btn-cart">
+                    <p>+</p>
+                    <div class="o"></div>
+                  </div>
                 </div>
-                <div class="text-center d-flex justify-content-center">
-                  <img class="img-prd" style="width: 90%;max-height: 375px;"
-                    src="./images/products/clock3.jpg" alt="">
-                </div>
-                <div class="text-center" style="font-weight: 500;">
-                  <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
-                  <p class="text-decoration-line-through d-inline">76,000,000₫
-                    </p class="price">1,000,000₫</p>
-                  </p>
-                </div>
-                <div class="cart btn-cart">
-                  <p>+</p>
-                  <div class="o"></div>
-                </div>
+    
               </div>
-  
-            </div>
-  
-            <div class="hot col-md-4 col-6 p-md-4">
-              <div class="product-item">
-                <div class="text-center d-flex justify-content-center">
-                  <img class="img-prd" style="width: 90%;max-height: 375px;"
-                    src="./images/products/clock4.jpg" alt="">
+              <div class="hot col-md-4 col-6 p-md-4">
+                <div class="product-item">
+                  <div class="text-center d-flex justify-content-center ">
+                    <img class="img-prd" style="width: 90%;max-height: 375px;"
+                      src="./images/products/clock5.jpg" alt="">
+                  </div>
+                  <div class="text-center" style="font-weight: 500;">
+                    <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                    <p class="text-decoration-line-through d-inline">76,000,000₫
+                      </p class="price">1,000,000₫</p>
+                    </p>
+                  </div>
+                  <div class="cart btn-cart">
+                    <p>+</p>
+                    <div class="o"></div>
+                  </div>
                 </div>
-                <div class="text-center" style="font-weight: 500;">
-                  <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
-                  <p class="text-decoration-line-through d-inline">76,000,000₫
-                    </p class="price">1,000,000₫</p>
-                  </p>
-                </div>
-                <div class="cart btn-cart">
-                  <p>+</p>
-                  <div class="o"></div>
-                </div>
+    
               </div>
-  
-            </div>
-            <div class="hot col-md-4 col-6 p-md-4">
-              <div class="product-item">
-                <div class="text-center d-flex justify-content-center ">
-                  <img class="img-prd" style="width: 90%;max-height: 375px;"
-                    src="./images/products/clock5.jpg" alt="">
+              <div class="hot col-md-4 col-6 p-md-4">
+                <div class="product-item">
+                  <div class="sale-off d-flex justify-content-center text-light">
+                    <p>-90%</p>
+                  </div>
+                  <div class="text-center d-flex justify-content-center">
+                    <img class="img-prd" style="width: 90%;max-height: 375px;"
+                      src="./images/products/clock6.jpg" alt="">
+                  </div>
+                  <div class="text-center" style="font-weight: 500;">
+                    <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
+                    <p class="text-decoration-line-through d-inline">76,000,000₫
+                      </p class="price">1,000,000₫</p>
+                    </p>
+                  </div>
+                  <div class="cart btn-cart">
+                    <p>+</p>
+                    <div class="o"></div>
+                  </div>
                 </div>
-                <div class="text-center" style="font-weight: 500;">
-                  <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
-                  <p class="text-decoration-line-through d-inline">76,000,000₫
-                    </p class="price">1,000,000₫</p>
-                  </p>
-                </div>
-                <div class="cart btn-cart">
-                  <p>+</p>
-                  <div class="o"></div>
-                </div>
+    
               </div>
-  
+    
             </div>
-            <div class="hot col-md-4 col-6 p-md-4">
-              <div class="product-item">
-                <div class="sale-off d-flex justify-content-center text-light">
-                  <p>-90%</p>
-                </div>
-                <div class="text-center d-flex justify-content-center">
-                  <img class="img-prd" style="width: 90%;max-height: 375px;"
-                    src="./images/products/clock6.jpg" alt="">
-                </div>
-                <div class="text-center" style="font-weight: 500;">
-                  <a href="#" class="name-cart">VERSACE VANITAS ROSE GOLD WATCH 40MM</a>
-                  <p class="text-decoration-line-through d-inline">76,000,000₫
-                    </p class="price">1,000,000₫</p>
-                  </p>
-                </div>
-                <div class="cart btn-cart">
-                  <p>+</p>
-                  <div class="o"></div>
-                </div>
-              </div>
-  
-            </div>
-  
           </div>
         </div>
       </div>
-
+    <!-- >>>>> -->
+      
     </div>
     <a href="#" class="messenger">
       <img data-remodal-target="fb-messenger" src="./images/fb-messenger.png">
@@ -968,7 +1068,49 @@
     });
     
   </script>
-  
+   <script>
+    function hot_openNav() {
+      document.getElementById("hot-mySidenav").style.width = "260px";
+      document.getElementById("hot-mySidenav-bg").style.width = "100%";
+      document.getElementById("hot-mySidenav-filter").style.display = "none";
+      document.getElementById("hot-mySidenav-close").style.display = "block";
+    }
+    
+    function hot_closeNav() {
+      document.getElementById("hot-mySidenav").style.width = "0%";
+      document.getElementById("hot-mySidenav-bg").style.width = "0%";
+      document.getElementById("hot-mySidenav-filter").style.display = "block";
+      document.getElementById("hot-mySidenav-close").style.display = "none";
+    }
+    </script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "260px";
+        document.getElementById("mySidenav-bg").style.width = "100%";
+        document.getElementById("mySidenav-close").style.display = "block";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0%";
+        document.getElementById("mySidenav-bg").style.width = "0%";
+        document.getElementById("mySidenav-close").style.display = "none";
+      }
+      </script>
+      <script>
+        function mb_openNav() {
+          document.getElementById("mb-mySidenav").style.width = "260px";
+          document.getElementById("mb-mySidenav-bg").style.width = "100%";
+          // document.getElementById("mb-mb-mySidenav-filter").style.display = "none";
+          document.getElementById("mb-mySidenav-close").style.display = "block";
+        }
+        
+        function mb_closeNav() {
+          document.getElementById("mb-mySidenav").style.width = "0%";
+          document.getElementById("mb-mySidenav-bg").style.width = "0%";
+          // document.getElementById("mb-mb-mySidenav-filter").style.display = "block";
+          document.getElementById("mb-mySidenav-close").style.display = "none";
+        }
+        </script>
 </body>
 
 </html>

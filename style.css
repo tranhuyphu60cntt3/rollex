@@ -167,6 +167,18 @@ li a{
   font-size: 14px;
   color: #cbba9c;
 }
+.cart-mb{
+  position: relative;
+  z-index: 2;
+  width: 26px;
+  height: 26px;
+  border: 3px solid #cbba9c;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  color: #cbba9c;
+}
 .o {
   position: absolute;
   z-index: 1;
@@ -180,13 +192,7 @@ li a{
   border-top-right-radius: 14px;
   border-bottom: 0;
 }
-.cart:hover .o{
-  top: -10px;
-}
-.cart:hover{
-  background-color: #cbba9c ;
-  color: #fff;
-}
+
 .cart{
   position: relative;
 }
@@ -201,6 +207,32 @@ li a{
   background-color: white;
   padding-right: 30px;
   display: none;
+}
+/* .cart-header_gio-mb{
+  position: fixed;
+  top:0;
+  right: 0px;
+  width: 250px;
+  min-height: 250px;
+  z-index: 20;
+  background-color: white;
+  overflow: hidden;
+  display: none;
+} */
+/* @media (max-width: 768px){
+  .cart-mb:hover .cart-header_gio-mb{
+    width: 250px;
+    display: block;
+  }
+} */
+@media (min-width: 769px){
+  .cart:hover .o{
+    top: -10px;
+  }
+  .cart:hover{
+    background-color: #cbba9c ;
+    color: #fff;
+  }
 }
 #cart:hover .cart-header_gio{
   display: block;
@@ -274,19 +306,24 @@ a.remove:hover{
   border-bottom: 2px solid #c2b5b0;
 }
 /* header */
+.menu-header.top{
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
+.nav-item_header-mb{
+  font-size: .8em ;
+  position: relative;
+  border-bottom: .1px solid #cbba9c;
+}
 .form-control {
   /* width: auto; */
   display: inline;
 }
 .navbar-nav-scroll {
   max-height: 300px;
-}
-.navbar.top{
-  position: fixed;
-  top: 0px;
-  left: 0;
-  right: 0;
-  z-index: 4;
 }
 .navbar-collapse {
   flex-basis: 100%;
@@ -298,12 +335,21 @@ a.remove:hover{
   font-size: 21px;
   width: 40px;
 }
-/* a.nav-link{
-  font-weight: bolder;
-  color: #fff;
-} */
-/* .icon-menu:focus::before .box-call .in-call{
-  display: none;
+.nav-item_header-mb .accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  color: #212529;
+  text-align: left;
+  background-color: #f4f4f4;
+  border: 0;
+  border-radius: 0;
+}
+/* .nav-item_header-mb .accordion-button::after{
+  height: 1.95rem;
 } */
 /* messenger */
 .messenger{ 
@@ -318,6 +364,7 @@ a.remove:hover{
 .in-call{
   display: none;
 }
+
 @media (max-width: 500px) {
   .call{
     position: fixed !important;
@@ -341,7 +388,6 @@ a.remove:hover{
     width: 140px;
     height: 140px;
     z-index: 3;
-    
   }
   .in-call{
     background-color: rgba(204, 153, 0, 0.4) ;
@@ -674,6 +720,7 @@ nav i.search{
 }
 
 /* hot */
+
 /* .hot .product-item {
   width: 280px;
   height: 300px;
@@ -695,7 +742,7 @@ span.product-title{
   margin-top: 0;
 }
 .nav-hot.navbar>.container-fluid{
-  justify-content: flex-end;
+  justify-content: end;
 }
 del span{
   opacity: .6;
@@ -790,27 +837,30 @@ a.brands-item:hover{
 }
 /* boostrap */
 @media (min-width:800px) {
+  .menu-header{
+    background-color: #0a0a0a;
+  }
   .navbar-light .navbar-nav .nav-link.active, 
   .navbar-light .navbar-nav .show>.nav-link {
     color: #fff;
   }
   .navbar {
-    background-color: #000;
+    background-color: #0a0a0a;
   }
-  li.t{
+  .t{
     position: relative;
   }
-  li.t::before{
+  .t::before{
     position: absolute;
     content: "";
-    top: 30%;
+    top: 40%;
     left: 0px;
-    width: 2px;
-    height: 20px;
-    background-color: #856a6a;
+    width: 1px;
+    height: 15px;
+    background-color: #eed9d9;
     z-index: 1;
   }
-  li.t::before:first-child{
+  .t::before:first-child{
     display: none;
  }
   .gia{
@@ -825,13 +875,26 @@ a.brands-item:hover{
     content: "";
     top: 25%;
     right: 0px;
-    width: 2px;
+    width: 1px;
     height: 20px;
     background-color: #856a6a;
     z-index: 2;
   }
   a.a-nav{
     color: #fff;
+    font-family: "Muli", sans-serif;
+    font-size: 0.9em;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+  a.a-nav-mb{
+    color: #fff;
+    font-family: "Muli", sans-serif;
+    letter-spacing: .02em;
+    font-size: .8em;
+    text-transform: uppercase;
+    font-weight: bolder;
   }
   a.a-nav:hover{
     color: #7ca740;  
@@ -864,9 +927,22 @@ a.brands-item:hover{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
   }
+  /* header hot */
+.navbar-collapse {
+  position: fixed;
+  z-index: 20;
+  width: 250px;
+  top: 0;
+  left: 0;
+  overflow: auto;
+}
+.navbar-toggler{
+  display: flex;
+  justify-content: center;
+}
+
 }
 @media (min-width: 576px){
-
   .modal-dialog {
       max-width: 800px;
   }
@@ -941,3 +1017,163 @@ figure.containerZoom.active img{
   position: absolute;
 }
 .sta .selected{color:#d26e4b;}
+
+/* HOT-HEDAER */
+.hot-mySidenav-bg{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(109, 109, 109,.8);
+  opacity: .5;
+  z-index: 19;
+}
+.hot-mySidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgba(255,255,255,.95);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the hot-mySidenav */
+}
+.hot-mySidenav .hot-mySidenav-close {
+  position: fixed;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  opacity: .7;
+  color: #fff;
+  font-weight: 300;
+  display: block;
+  font-family: Arial, monospace;
+  text-decoration: none;
+}
+/* mobile tablet */
+@media (max-width: 768px) {
+  .hot-mySidenav-filter{
+    display: block;
+  }
+  .hot-mySidenav-pc{
+    display: none;
+  }
+}
+/* pc */
+@media (min-width: 769px) {
+  .hot-mySidenav-filter{
+    display: none !important;
+  }
+  .hot-mySidenav-pc{
+    display: block;
+  }
+}
+
+/* header */
+
+/* ============== */
+.mySidenav-bg{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(109, 109, 109,.8);
+  opacity: .5;
+  z-index: 19;
+}
+.mySidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgba(255,255,255,.95);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the mySidenav */
+}
+.mySidenav .mySidenav-close {
+  position: fixed;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  opacity: .7;
+  color: #fff;
+  font-weight: 300;
+  display: none;
+  font-family: Arial, monospace;
+  text-decoration: none;
+}
+/* mobile tablet */
+@media (max-width: 768px) {
+  .mySidenav-filter{
+    display: block;
+  }
+  .mySidenav-pc{
+    display: none;
+  }
+}
+/* pc */
+@media (min-width: 769px) {
+  .mySidenav-filter{
+    display: none !important;
+  }
+  .mySidenav-pc{
+    display: block;
+  }
+  .mySidenav-close{
+    display: none !important;
+  }
+}
+/* === */
+/* mb carrt */
+.mb-mySidenav-bg{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(109, 109, 109,.8);
+  opacity: .5;
+  z-index: 19;
+}
+.mb-mySidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: rgba(255,255,255,.95);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the mb-mySidenav */
+}
+.mb-mySidenav .mb-mySidenav-close {
+  position: fixed;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  opacity: .7;
+  color: rgb(185, 164, 164);
+  font-weight: 300;
+  display: none;
+  font-family: Arial, monospace;
+  text-decoration: none;
+}
+/* mobile tablet */
+@media (max-width: 768px) {
+  .mb-mySidenav-filter{
+    display: block;
+  }
+}
+/* pc */
+@media (min-width: 769px) {
+  .mb-mySidenav-filter{
+    display: none !important;
+  }
+}

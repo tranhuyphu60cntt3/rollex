@@ -17,7 +17,6 @@
    
   <script src="./jquery/jquery-3.6.0.min.js"></script>
   <script src="./jquery/jquery-migrate-3.3.2.min.js"></script>
-  
 
   <link rel="stylesheet" href="./slick/slick.css">
   <link rel="stylesheet" href="./slick/slick-theme.css">
@@ -297,111 +296,30 @@
     </div>
       </div>
     </header>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-md-7 d-flex justify-content-center">
-          <div class="p-2 w-90">
-            <table class="table-cart w-100 ">
-              <tr>
-                <th colspan="4">SẢN PHẨM</th>
-                <th class="d-none d-md-block">GIÁ</th>
-                <th>SỐ LƯỢNG</th>
-                <th class="d-none d-md-block">TỔNG</th>
-              </tr>
-              <tr>
-                <td class="d-flex align-items-center justify-content-center">
-                  <div class="pt-4" style="height: 80px;">
-                    <a href="" class="remove">x</a>
-                  </div>
-                </td>
-                <td>
-                  <a href="">
-                    <img style="width: 80px;height: 80px;" src="http://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/15-480x480.jpg" 
-                    class="" alt="">
-                  </a>
-                </td>
-                <td colspan="2">
-                  <a class="a-cart" href="">TISSOT LE LOCLE T006 AUTO WATCH 39MM</a>
-                </td>
-                <td class="d-none d-md-block pb-41"><b>9,540,000₫</b></td>
-                <td>
-                  <div class="buttons_added d-flex">
-                    <input class="minus is-form" type="button" value="-">
-                    <input aria-label="quantity" class="input-qty" max="9999" min="1" name="" 
-                    type="number" value="1" style="width: 40px;" >
-                    <input class="plus is-form" type="button" value="+">
-                  </div>
-                </td>
-                <td class="d-none d-md-block pb-41"><b>9,540,000₫</td>
-              </tr>
-              <tr>
-                <td colspan="3">
-                  <a href="./hot.html" class="sp text-center d-block p-2">
-                    TIẾP TỤC XEM SẢN PHẨM
-                  </a>
-                </td>
-                <td colspan="2">
-                  <a href="./cart.html" class="update text-center text-light d-block p-2">
-                    CẬP NHẬT GIỎ HÀNG
-                  </a>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div class="col-12 col-md-5 d-flex justify-content-center">
-          <div class="p-2 w-90">
-            <table class="table-cart w-90 py-3">
-              <tr class="">
-                <th>TỔNG SỐ LƯỢNG</th>
-                <th></th>
-              </tr>
-              <tr>
-                <td>Tổng phụ</td>
-                <td class="text-end">14,619,000 ₫</td>
-              </tr>
-              <tr>
-                <td>Giao hàng</td>
-                <td class="text-end" style="font-size: 13px;">
-                  <a class="a-cart" href="#">Giao hàng miễn phí</a>
-                  <p class="">Ước tính cho <b>Việt Nam</b></p>
-                  <a class="a-cart" href="#">Đổi địa chỉ</a>
-                </td>
-              </tr>
-              <tr >
-                <td>Tổng</td>
-                <td class="text-end">14,619,000 ₫</td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <a href="./thanhtoan.html" class="thanhtoan text-center text-light d-block p-2">
-                    TIẾN HÀNH THANH TOÁN
-                  </a>
-                </td>
-              <tr> 
-                <td colspan="2">
-                  <i class="fa fa-tag" aria-hidden="true"></i>
-                  <b>Phiếu ưu đãi</b>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <input class="boder d-block p-2 w-100" type="text" name="" id="" placeholder="Mã ưu đãi">                              
-                </td>
-             </tr>
-              </tr>
-              <td colspan="2">
-                <a href="./thanhtoan.html" class="apdung text-center d-block p-2">
-                  Áp dụng
-                </a>
-              </td>
-              </tr>
-            </table>
-          </div>
-        </div>
+    <div class="">
+      <div class="p-5">
+            <div class="row">
+              <div class="col-12 py-2">
+                <label for="">Tên đăng nhập hoặc email *</label>
+                <input class="w-90" type="text" name="" id="">
+              </div>
+              <div class="col-12 py-2">
+                <label for="">Mật khẩu *</label>
+                <input class="w-90" type="password" name="" id="">
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <a href="./cart.html" class="update text-center text-light d-block p-2">
+                ĐĂNG NHẬP
+              </a>
+              <form class="ps-3" action="">
+                <input type="checkbox" id="" name="" value="Bike">
+                <label for=""> Ghi nhớ mật khẩu</label><br>
+              </form>
+            </div>
+            <p>Quên mật khẩu</p>   
       </div>
     </div>
-    
     <a href="#" class="messenger">
       <img data-remodal-target="fb-messenger" src="./images/fb-messenger.png">
     </a>
@@ -588,27 +506,45 @@
       </div>
     </div>
   </a>
+  
+
+  <script src="./js/main.js"></script>
+  <script src="./js/util.js"></script>
+
+  <script src="./slick/slick.min.js"></script>
+  <script src="./slick/slick.js"></script>
+
+  <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- <script src="./script.js"></script> -->
+
   <script>
-    // tang giam sl
-    $('input.input-qty').each(function() {
-  var $this = $(this),
-    qty = $this.parent().find('.is-form'),
-    min = Number($this.attr('min')),
-    max = Number($this.attr('max'))
-  if (min == 0) {
-    var d = 0
-  } else d = min
-  $(qty).on('click', function() {
-    if ($(this).hasClass('minus')) {
-      if (d > min) d += -1
-    } else if ($(this).hasClass('plus')) {
-      var x = Number($this.val()) + 1
-      if (x <= max) d += 1
-    }
-    $this.attr('value', d).val(d)
-  })
-  })
-// slider
+    $('.single-item').slick();
+    $('.autoplay').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      // autoplaySpeed: 2000,
+    });
+    $('.filtering3').slick({
+      responsive: [
+        {
+          breakpoint: 1500,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+
     var gotop = $(".back-to-top");
     $(window).on("scroll", () => {
       if ($(this).scrollTop() >= 50) {
@@ -634,26 +570,6 @@
       }
     });
     
-// slider
-$('.single-item').slick();
-    $('.filtering3').slick({
-      responsive: [
-        {
-          breakpoint: 1500,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-          },
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          },
-        },
-      ],
-    });
   </script>
   <script>
     function openNav() {
@@ -683,13 +599,6 @@ $('.single-item').slick();
         document.getElementById("mb-mySidenav-close").style.display = "none";
       }
       </script>
-  <script src="./js/main.js"></script>
-  <script src="./js/util.js"></script>
-
-  <script src="./slick/slick.min.js"></script>
-  <script src="./slick/slick.js"></script>
-
-  <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./script.js"></script>
 </body>
+
 </html>
